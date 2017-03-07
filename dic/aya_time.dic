@@ -1,0 +1,378 @@
+﻿///////// 此文档中存在特殊符号 ? (一个音符),有可能你只看到一个方框,但如果看到的是 ? 时请用其他工具修改
+///////// 时间处理/见切、重叠反应
+///////// by ndmh.
+
+//**** 时间处理 ***************************************************************************************************
+//----- OnMinuteChange -------
+OnMinuteChange
+{
+	//计算人格起动总时间/单位分
+	elapsedtimetotal += 1;
+	
+	_smoketime = TOINT(systemuptime) - TOINT(lastboottime)
+	if TOINT(_smoketime) % 3600 < 60 && _smoketime >= 60
+  {
+    {
+      _worktime = TOINT(_smoketime) / 3600
+      "\1\s[10]我们连续工作了%(_worktime)小时啊。\w9\s[12]\n把薪水交出来。\w9\w9\0\s[30]不是什么都没做吗。"
+      --
+      "\e"
+      "\w9\w9\1\s[10]\n\n[half]装可爱就是猫的工作啊。\w9\w9\0\s[6]\n\n[half]既然如此、快点开始工作吧。\w9\w9\1\n\n[half]…\w9…\w9…\e"
+    }
+    "\1\s[11]啊゛啊゛啊゛呀─────！！\w9\0\s[30]怎么了？\w9\w9\1\s[12]\n\n[half]断掉了─────！！\w9\w9\1\s[19]\b[-1]\w9\w9\0\s[30]\n\n[half]…\w9…\w9…\w9\w9\w9\w9\1\s[10]\c呼～～～。\w9\w9\n呃、\w9见笑了。\w9\w9\0\s[8]\n\n[half]…\w9…\w9…\e"
+    "\![raise,OnSmokingPlace]"
+   }
+	elseif minute == 0
+	{
+		整点报时();
+	}
+	elseif mikireflag == 1
+	{
+		//见切中
+		MikireTalk
+	}
+	elseif reference2 == 1
+	{
+		if kasanariswitch == "1"
+		{
+			//重叠反应
+			Kasanari
+		}
+	}
+}
+
+OnSmokingPlace
+{
+	smoking = "1"
+	"\1\s[10]暂离、\w9我要去补给菸分。\w9\w9\0\s[8]菸分？\1\s[19]\b[-1]\e"
+}
+
+//----- OnSecondChange ---------------------
+OnSecondChange
+{
+	if mode == "0"
+	{
+		if mikireflag == 1 && reference1 == 0
+		{
+      //见切終了
+			EndMikireTalk
+		}
+		mikireflag = reference1
+		if headpatflag == 1
+		{
+			if headpattime >= 30
+			{
+				headpatcount = 0
+				headpatflag = 0
+				headpattime = 0
+			}
+			else
+			{
+				headpattime++
+			}
+		}
+		if bustpatflag == 1
+		{
+			if bustpattime >= 30
+			{
+				bustpatcount = 0
+				bustpatflag = 0
+				bustpattime = 0
+			}
+			else
+			{
+				bustpattime++
+			}
+		}
+		if bustclickflag == 1
+		{
+			if bustclicktime >= 30
+			{
+				bustclickcount = 0
+				bustclickflag = 0
+				bustclicktime = 0
+			}
+			else
+			{
+				bustclicktime++
+			}
+		}
+	}
+}
+
+
+
+
+
+//----- 見切れ中 ----------------------------------------------------------------------
+MikireTalk
+{
+	talkmemo = "e_0"
+	"\0\s[3]如果会碍事的话、\w9\w9\n可以不要勉強让我们留著喔…\e"
+	"\0\s[1]如果妨碍到的话、\w9\w9\n可以让我们回去喔…\e"
+}
+
+//----- 見切れ終了 -------------------------------------------------------------------
+EndMikireTalk
+{
+	talkmemo = "e_0"
+	
+	"\0\s[3]%selfname不会妨碍到吗？\e"
+	"\0\s[0]啊…\w\w9\s[5]谢谢。\e"
+}
+
+//------ 重叠反应 ---------------------------------------------------------------------
+Kasanari
+{
+	"\1\s[10]…\w9…\w9…\w9\w9\4\w9\w9\w9\0\s[34]唔。\e"
+	"\1\s[10]太近了呢…\w9…\w9\w9\4\w9\w9\w9\0\s[30]唔。\e"
+}
+
+//------ surface复原 ----------------------------------------------------------------------
+
+OnSurfaceRestore
+{
+	if mode == "1"
+	{
+		"\0\s[99]\1\s[110]\b[-1]\e"
+	}
+	elseif rest == "1"
+	{
+	"\0\b[-1]\e"
+	}
+	elseif smoking == "1"
+	{
+		"\0\s[0]\b[-1]\e"
+	}
+	else
+	{
+		"\0\s[0]\1\s[10]\e"
+	}
+}
+
+//------ 整点报时\[2008-09_by ndmh] ---------------------------------------------------------------------
+整点报时
+{
+	//工作列报时，已知某些情况下工作列报时会延迟，如在看着电影时
+	"%(对话框报时)?\![set,trayballoon,--timeout=10,--title=橘花报时,--text=%(对话框报时)?]";	
+}
+
+OnTrayBalloonClick
+{
+  if minute>=5 {
+    "%username刚才去哪里了呢？"
+    "%username刚才在做什么呢？\1呐,不知道..."
+    "%username终于注意到了啊？\1呐,不知道..."
+  }
+  else {
+    "嗯嗯～"
+    "好的～"
+  }
+}
+
+OnTrayBalloonTimeout
+{
+  "%username不理橘花呢？"
+  "%username？"
+  "%username在做别的事吗？"
+}
+
+对话框报时
+{
+	整点报时特殊();
+	整点报时公式();
+}
+
+整点报时公式
+{	
+	ANY("", "", "", "%(username).", 打招呼() + "..");
+	--
+	"现在时间%(Timejud)%(hour12)点喔"
+	"现在时间已经%(hour)点了喔";
+	"已经%(Timejud)%(hour12)点了";
+	"现在%(hour)点了";
+}
+整点报时特殊
+{
+	case hour 
+	{
+		when 0 
+		{
+			"凌晨12点了呢.又是新的一天～";
+		}
+		when 1-4 
+		{
+			"%(hour)点了.%(username)还不睡吗";
+			"%(hour)点了.%(username)不睡吗.熬夜会变笨的喔";
+		}
+		when 5-6 
+		{
+			"%(hour)点了..要去看日出吗";
+			"呼哈～唔..%(hour)点了";
+		}
+		when 7-8 
+		{
+			"%(hour)点了.还沒清醒的话赶快打起精神喔";
+		}
+		when 9-11 
+		{
+			"%(hour)点了..据说是人一天中记忆能力最好的時段呢，要好好利用喔";
+		}
+		when 12 
+		{
+			"12点了.午餐时间～";
+		}
+		when 13-14 
+		{
+			"下午%(hour12)点了…總是很想睡的时间呢";
+		}
+		when 15-16 
+		{
+			"%(hour)点了.要不要來杯下午茶呢";
+		}
+		when 17-18 
+		{
+			"下午%(hour12)点.晚餐时间～";
+		}
+		when 19-23 
+		{
+			"%(hour)点了..接下來该做什么事呢";
+			"晚上%(hour12)了呢..%(username)在做什么呢";
+			"晚上%(hour12)了呢..这个时间%(username)应该都在电脑前吧";
+		}
+	}
+}
+
+
+打招呼
+{
+	if ( hour < 4 || hour > 16 )	{"晚安";}
+	elseif ( hour < 10 )			{"早安";}
+	else							{"午安";}
+}
+
+//----- 时间判断 -------------------------------------
+Timejud
+{
+	if ( _argc == 0 )
+		_argv[0] = hour;
+	
+	case _argv[0] {
+		when 0-4	{ "凌晨"; "半夜"; }
+		when 5-7	{ "清晨";"早上"; }
+		when 8-10	{ "上午"; }
+		when 11-13	{ "中午"; }
+		when 14-17	{ "下午"; }
+		when 18-19	{ "傍晚"; }
+		when 20-22	{ "晚上"; }
+		when 23	{ "深夜"; }
+	}
+}
+
+//---- 启动天数[2009-3_by ndmh]★ ---------------------------------------------------------------------------------------------
+//其实用GETSECCOUNT()来做的话更容易,不过那样存的参数就不能一目了然了...
+daysfromfirstboot
+{
+  _days=0;
+  _mon=(31,28,31,30,31,30,31,31,30,31,30,31);
+  _fy=TOINT(firstboottime[0]);
+  _fm=TOINT(firstboottime[1]);
+  _fd=TOINT(firstboottime[2]);
+  while _fy<=year {
+    if _fy%4==0
+      _mon[1]=29;
+    if year==_fy {
+      while _fm%12<month {
+        _days+=_mon[_fm%12-1];
+        _fm++;
+      }
+      _days=_days+day-_fd;
+    }
+    elseif _fy==TOINT(firstboottime[0]) {
+      while _fm<=12 {
+        _days+=_mon[_fm-1];
+        _fm++;
+      }
+    }
+    else {
+      if _fy%4==0
+        _days++;
+      _days+=365;
+    }
+    _fy++;
+  }
+  _days;
+}
+
+
+//---- 时间显示[2009-3_by ndmh]★ ----------------------------------------------------------------------------------------------
+TimePic
+{
+  _w="";
+  _h12=hour12;
+  _h=_argv[0]*22
+  _tp=(0,16,27,42,57,73,88,103,120,136,152);
+  _x=195;
+  if _h12>=10 {
+    _w=TimePshow(_x,_tp[1],_tp[2],_h);
+    _x+=_tp[1];
+  }
+  _w+=TimePshow(_x,_tp[_h12%10],_tp[_h12%10+1],_h);
+  _x+=_tp[_h12%10+1]-_tp[_h12%10];
+  _w+=TimePshow(_x,153,168,_h);
+  _x+=168-153;
+  _w+=TimePshow(_x,_tp[minute/10],_tp[minute/10+1],_h);
+  _x+=_tp[minute/10+1]-_tp[minute/10];
+  _w+=TimePshow(_x,_tp[minute%10],_tp[minute%10+1],_h);
+  //_x+=_tp[minute%10+1]-_tp[minute%10];
+  _w+="\_l[%(_x+3),-](%(Timejud))";
+  _w;
+}
+
+TimePshow
+{
+"\_b[pic\Time.png,"+_argv[0]+",30,--clipping=%(_argv[1]) %(_argv[3]) %(_argv[2]) %(_argv[3]+22)]"
+}
+
+OnTimeColor
+{
+  _w="\0\s[26]\b[2]有下面的颜色可以选择哦，%username可以选择\n与对话框相配的颜色呢?%(TimePic(TimeColors))\_q\n[300]"
+  for _i=0;_i<8;_i++ {
+    _w+="\![*]\__q[OnTimeCS,%(_i)]%(TimeCSP(_i))  切换成该颜色\__q\n[150]"
+  }
+  _w+="\n[50]\![*]\q[返回,ReturnMenu]\n\![*]\q[退出,MenuCancel]"
+  _w;
+}
+
+TimeCSP
+{
+  "\_b[pic\Time.png,inline,--clipping=0 %(_argv[0]*22) 176 %(_argv[0]*22+22)]"
+}
+
+OnTimeCS
+{
+  TimeColors=reference0;
+  "\0\s[26]已把时间显示颜色换成：%(TimePic(TimeColors))\n[150]\![*]\q[返回,ReturnMenu]\n\![*]\q[确定,MenuCancel]"
+}
+
+
+
+//**** 人格好感度联合判断 ************************************************************************************
+
+GetPhase
+{
+	if intimacy >= 50 && daysfromfirstboot>1
+		2
+	elseif intimacy <= -10
+		0
+	else
+		1
+}
+
+
+
+
+
+
+
+

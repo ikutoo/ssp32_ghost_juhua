@@ -1,0 +1,2445 @@
+﻿//花语&诞生花
+//---- 花语 ----------------------------------------------------------------
+Select.FlowerMessage
+{
+    Flower
+}
+
+Flower
+{
+"\0\s[0]\b[2]%(username)觉得哪种花比较好呢？\n\n/
+\q[◇玫瑰,rose]\n/
+\q[◇百合,lily]\n/
+\q[◇康乃馨,carnation]\n/
+\q[◇郁金香,tulip]\n/
+\q[◇鸢尾花,luce]\n/
+\q[◇水仙,narcissus]\n/
+\q[◇菊花,chrysanthemum]\n/
+\q[◇风信子,hyacinth]\n/
+\q[◇牵牛花,Choisy]\n/
+\q[◇樱花,Sakura]\n/
+\q[◇虞美人,poppy]\n/
+\q[◇桔梗,kikyou]\n/
+\q[◇石竹,CP]\n/
+\q[◇其他花,others]\n/
+\q[◇取消,FlowerCancel]\e" 
+}
+
+Select.rose 
+{
+ "\0\s[20]\b[2]玫瑰的话,\w9有很多种的样子.\w9\n/
+ 　\q[◇玫瑰,rose_0]\n/
+ 　\q[◇玫瑰（黑）,rose_d]\n/
+ 　\q[◇玫瑰（红）,rose_r]\n/
+ 　\q[◇玫瑰（粉红）,rose_p]\n/
+ 　\q[◇玫瑰（白）,rose_w]\n/
+ 　\q[◇玫瑰（黄）,rose_y]\n/
+ 　\q[◇玫瑰（蓝）,rose_b]\n/
+ 　\q[◇玫瑰（捧花）,rose_h]\n/
+ 　\q[◇玫瑰（1朵）,rose_1]\n/
+ 　\q[◇玫瑰（999）,rose_999]\n/
+   \q[◇返回,ReturnF]\n/
+   \q[◇取消,FlowerCancel]\e" 
+}
+Select.lily
+{
+ "\0\s[20]\b[2]百合的话,\w9有很多种的样子.\w9\n/
+  \q[◇百合,lily_0]\n/
+  \q[◇百合（香水）,lily_1]\n/
+  \q[◇百合（白）,lily_2]\n/
+  \q[◇百合（葵）,lily_3]\n/
+  \q[◇百合（姬）,lily_4]\n/
+　\q[◇狐尾百合,lily_5]\n/
+　\q[◇玉米百合,lily_6]\n/
+　\q[◇编笠百合,lily_7]\n/
+　\q[◇圣诞百合,lily_8]\n/
+　\q[◇水仙百合,lily_9]\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.carnation
+{
+ "\0\s[20]\b[2]康乃馨的话,\w9有很多种的样子.\w9\n/
+  \q[◇康乃馨,carnation_0]\n/
+  \q[◇康乃馨（红）,carnation_1]\n/
+  \q[◇康乃馨（粉红）,carnation_2]\n/
+  \q[◇康乃馨（白）,carnation_3]\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e"
+}
+Select.tulip
+{
+ "\0\s[0]\b[2]郁金香,\w9是荷兰的象征.\w9\n/
+  \q[◇郁金香,tulip_0]\n/
+  \q[◇郁金香（红）,tulip_r]\n/
+  \q[◇郁金香（粉）,tulip_p1]\n/
+  \q[◇郁金香（黄）,tulip_y]\n/
+  \q[◇郁金香（紫）,tulip_p2]\n/
+  \q[◇郁金香（白）,tulip_w]\n/
+  \q[◇郁金香（双色）,tulip_d]\n/
+  \q[◇郁金香（羽毛）,tulip_f]\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e"
+}
+Select.luce
+{
+ "\0\s[0]\b[2]鸢尾花,\w9是法国的国花.\w9\n/
+  \q[◇鸢尾（爱丽斯）,luce_0]\n/
+  \q[◇德国鸢尾,luce_d]\n/
+  \q[◇小鸢尾,luce_s]\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e"
+}
+Select.narcissus
+{
+ "\0\s[20]\b[2]水仙的话,\w9有很多种的样子.\w9\n/
+  \q[◇中国水仙,narcissus_0]\n/
+  \q[◇西洋水仙,narcissus_1]\n/
+  \q[◇黄水仙,narcissus_2]\n/
+  \q[◇山水仙,narcissus_3]\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e"
+}
+Select.chrysanthemum
+{
+ "\0\s[20]\b[2]菊花的话,\w9有很多种的样子.\w9\n/
+  \q[◇菊花,chr_0]\n/
+  \q[◇翠菊,chr_1]\n/
+  \q[◇春菊,chr_2]\n/
+  \q[◇六月菊,chr_3]\n/
+  \q[◇冬菊,chr_4]\n/
+  \q[◇法国小菊,chr_5]\n/
+  \q[◇瓜叶菊,chr_6]\n/
+  \q[◇波斯菊,chr_7]\n/
+  \q[◇大波斯菊,chr_8]\n/
+  \q[◇万寿菊,chr_9]\n/
+  \q[◇矢车菊,chr_10]\n/
+  \q[◇麦杆菊,chr_11]\n/
+  \q[◇鳞托菊,chr_12]\n/
+  \q[◇雏菊（延命菊）,chr_13]\n/
+  \q[◇非洲菊（扶郎花）,chr_14]\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e"
+}
+Select.hyacinth
+{
+ "\0\s[20]\b[2]风信子的话,\w9有很多种的样子.\w9\n/
+  \q[◇风信子,hya_0]\n/
+  \q[◇紫色风信子,hya_1]\n/
+  \q[◇淡紫色风信子,hya_2]\n/
+  \q[◇白色风信子,hya_3]\n/
+  \q[◇红色风信子,hya_4]\n/
+  \q[◇桃红色风信子,hya_5]\n/
+  \q[◇粉色风信子,hya_6]\n/
+  \q[◇黄色风信子,hya_7]\n/
+  \q[◇蓝色风信子,hya_8]\n/
+  \q[◇深蓝色风信子,hya_9]\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e"
+}
+Select.Choisy
+{
+ "\0\s[20]\b[2]牵牛花的话,\w9有很多种的样子.\w9\n/
+  \q[◇牵牛花,Choisy_1]\n/
+  \q[◇矮牵牛,Choisy_2]\n/
+  \q[◇爱丽丝,Choisy_3]\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e"
+}
+Select.Sakura
+{
+ "\0\s[20]\b[2]樱花的话,\w9有很多种的样子.\w9\n/
+  \q[◇樱花,Sakura_1]\n/
+  \q[◇山樱,Sakura_2]\n/
+  \q[◇西洋樱花,Sakura_3]\n/
+  \q[◇冬樱花,Sakura_4]\n/
+  \q[◇重瓣樱花,Sakura_5]\n/
+  \q[◇樱花草,Sakura_6]\n/
+  \q[◇山樱花,Sakura_7]\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e"
+}
+Select.poppy
+{
+ "\0\s[20]\b[2]虞美人的话,\w9有很多种的样子.\w9\n/
+  \q[◇虞美人,poppy_1]\n/
+  \q[◇红色虞美人,poppy_2]\n/
+  \q[◇白色虞美人,poppy_3]\n/
+  \q[◇淡红虞美人,poppy_4]\n/
+  \q[◇深红虞美人,poppy_5]\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e"
+}
+Select.kikyou
+{
+ "\0\s[20]\b[2]桔梗的话,\w9有很多种的样子.\w9\n/
+　\q[◇桔梗,kikyou_1]\n/
+　\q[◇丸叶桔梗 ,kikyou_2]\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e"
+}
+Select.CP
+{
+ "\0\s[20]\b[2]石竹的话,\w9有很多种的样子.\w9\n/
+  \q[◇石竹,CP_0]\n/
+  \q[◇丁香石竹,CP_1]\n/
+  \q[◇五彩石竹,CP_2]\n/
+  \q[◇香石竹,CP_3]\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e"
+}
+Select.others
+{
+ "\0\s[23]\b[2]其实,\w9橘花也知道一些其他花的花语哦\w9\n/
+  \q[◇百日草,others_0]\n/
+  \q[◇薄荷,others_1]\n/
+  \q[◇薄雪草,others_2]\n/
+  \q[◇柏树,others_3]\n/
+  \q[◇并蒂莲,others_4]\n/
+  \q[◇薰衣草,others_5]\n/
+  \q[◇天堂鸟,others_6]\n/
+  \q[◇向日葵,others_7]\n/
+  \q[◇山茶花,others_8]\n/
+  \q[◇三色堇,others_9]\n/
+  \q[◇玛格丽特,others_10]\n/
+  \q[◇曼珠沙华,others_11]\n/
+  \q[◇火绒草,others_12]\n/
+  \q[◇荷花,others_13]\n/
+  \q[◇玉兰花,others_14]\n/
+  \q[◇茉莉花,others_15]\n/
+  \q[◇水仙菖,others_16]\n/
+  \q[◇晚香玉,others_17]\n/
+  \q[◇香罗兰,others_18]\n/
+  \q[◇吊兰,others_19]\n/
+  \q[◇柽柳,others_20]\n/
+  \q[◇枸橼,others_21]\n/
+  \q[◇火鹤,others_22]\n/
+  \q[◇菖蒲,others_23]\n/
+  \q[◇栀子,others_24]\n/
+  \q[◇仙客来,others_25]\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e"
+}
+
+Select.FlowerCancel 
+{
+"\0\s[0]好的。\w9\w9\e" 
+"\0\s[0]这样有帮上你的忙吗？\w9\w9\e" 
+}
+Select.ReturnF
+{
+ Flower
+}
+
+//==============玫瑰花==========================================================================================================
+Select.rose_0
+{
+ "\0\s[20]\b[2]玫瑰：爱情、爱与美、容光焕发、爱和艳情\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.rose_d
+{
+ "\0\s[20]\b[2]玫瑰（黑）：黑暗、挑战\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.rose_r
+{
+ "\0\s[20]\b[2]玫瑰（红）：热情、热爱着您、热恋\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.rose_p
+{
+ "\0\s[20]\b[2]玫瑰（粉红）：感动、爱的宣言、铭记于心、初恋\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.rose_w
+{
+ "\0\s[20]\b[2]玫瑰（白）：天真、纯洁、尊敬\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.rose_y
+{
+ "\0\s[20]\b[2]玫瑰（黄）：不贞、嫉妒、分手\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.rose_b
+{
+ "\0\s[20]\b[2]玫瑰（蓝）：神秘、妖娆\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.rose_h
+{
+ "\0\s[20]\b[2]玫瑰（捧花）：幸福之爱\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.rose_1
+{
+ "\0\s[20]\b[2]玫瑰（1朵）：一心一意\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.rose_999
+{
+ "\0\s[20]\b[2]玫瑰（999）：天长地久\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+//==============百合==========================================================================================================
+Select.lily_0
+{
+ "\0\s[20]\b[2]百合：顺利、心想事成、祝福、高贵\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.lily_1
+{
+ "\0\s[20]\b[2]百合（香水）：纯洁、婚礼的祝福、高贵\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.lily_2
+{
+ "\0\s[20]\b[2]百合（白）：纯洁、庄严、心心相印\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.lily_3
+{
+ "\0\s[20]\b[2]百合（葵）：胜利、荣誉、富贵\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.lily_4
+{
+ "\0\s[20]\b[2]百合（姬）：财富、荣誉、清纯、高雅\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.lily_5
+{
+ "\0\s[20]\b[2]狐尾百合：尊贵、欣欣向荣、杰出\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.lily_6
+{
+ "\0\s[20]\b[2]玉米百合：执著的爱、勇敢\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.lily_7
+{
+ "\0\s[20]\b[2]编笠百合：才能、威严、杰出\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.lily_8
+{
+ "\0\s[20]\b[2]圣诞百合：喜洋洋、庆祝、真情\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.lily_9
+{
+ "\0\s[20]\b[2]水仙百合：喜悦、期待相逢\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+//==============康乃馨==========================================================================================================
+Select.carnation_0
+{
+ "\0\s[20]\b[2]康乃馨：母亲我爱您、热情、真情\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.carnation_1
+{
+ "\0\s[20]\b[2]康乃馨（红）：相信你的爱\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.carnation_2
+{
+ "\0\s[20]\b[2]康乃馨（粉红）：热爱、亮丽\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.carnation_3
+{
+ "\0\s[20]\b[2]康乃馨（白）：吾爱永在、真情、纯洁\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+//==============郁金香==========================================================================================================
+Select.tulip_0
+{
+ "\0\s[20]\b[2]郁金香：爱的表白、荣誉、祝福永恒\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.tulip_r
+{
+ "\0\s[20]\b[2]郁金香（红）：爱的宣言、喜悦、热爱\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.tulip_p1
+{
+ "\0\s[20]\b[2]郁金香（粉）：美人、热爱、幸福\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.tulip_y
+{
+ "\0\s[20]\b[2]郁金香（黄）：高贵、珍重、财富、绝望之爱\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.tulip_p2
+{
+ "\0\s[20]\b[2]郁金香（紫）：无尽的爱、最爱、永恒的爱\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.tulip_w
+{
+ "\0\s[20]\b[2]郁金香（白）：纯情、纯洁\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.tulip_d
+{
+ "\0\s[20]\b[2]郁金香（双色）：美丽的你、喜相逢\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.tulip_f
+{
+ "\0\s[20]\b[2]郁金香（羽毛）：情意绵绵\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+//==============鸢尾花==========================================================================================================
+Select.luce_0
+{
+ "\0\s[20]\b[2]鸢尾（爱丽斯）：好消息、使者、想念你\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.luce_d
+{
+ "\0\s[20]\b[2]德国鸢尾：神圣\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.luce_s
+{
+ "\0\s[20]\b[2]小鸢尾：协力抵挡、同心\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+//==============水仙==========================================================================================================
+Select.narcissus_0
+{
+ "\0\s[20]\b[2]中国水仙：多情、想你\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.narcissus_1
+{
+ "\0\s[20]\b[2]西洋水仙：期盼爱情、爱你、纯洁\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.narcissus_2
+{
+ "\0\s[20]\b[2]黄水仙：重温爱情\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.narcissus_3
+{
+ "\0\s[20]\b[2]山水仙：美好时光、欣欣向荣\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+//==============菊花==========================================================================================================
+Select.chr_0
+{
+ "\0\s[20]\b[2]菊花：清净、高洁、我爱你、真情\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_1
+{
+ "\0\s[20]\b[2]翠菊：追想、可靠的爱情、请相信我\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_2
+{
+ "\0\s[20]\b[2]春菊：为爱情占卜\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_3
+{
+ "\0\s[20]\b[2]六月菊：别离\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_4
+{
+ "\0\s[20]\b[2]冬菊：别离\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_5
+{
+ "\0\s[20]\b[2]法国小菊：忍耐\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_6
+{
+ "\0\s[20]\b[2]瓜叶菊：快乐\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_7
+{
+ "\0\s[20]\b[2]波斯菊：纯真并，永远快乐着\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_8
+{
+ "\0\s[20]\b[2]大波斯菊：少女纯情\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_9
+{
+ "\0\s[20]\b[2]万寿菊：友情\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_10
+{
+ "\0\s[20]\b[2]矢车菊：纤细、优雅\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_11
+{
+ "\0\s[20]\b[2]麦杆菊：永恒的记忆、刻画在心\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_12
+{
+ "\0\s[20]\b[2]鳞托菊：永远的爱\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_13
+{
+ "\0\s[20]\b[2]雏菊（延命菊）：愉快、幸福、纯洁、天真、和平、希望、美人\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.chr_14
+{
+ "\0\s[20]\b[2]非洲菊（扶郎花）：神秘、兴奋\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+//==============风信子==========================================================================================================
+Select.hya_0
+{
+ "\0\s[20]\b[2]风信子：只要点燃生命之火，便可同享丰富人生\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.hya_1
+{
+ "\0\s[20]\b[2]紫色风信子：悲伤、妒忌\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.hya_2
+{
+ "\0\s[20]\b[2]淡紫色风信子：轻柔的气质、浪漫的情怀\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.hya_3
+{
+ "\0\s[20]\b[2]白色风信子：纯洁清淡或不敢表露的爱\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.hya_4
+{
+ "\0\s[20]\b[2]红色风信子：感谢你\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.hya_5
+{
+ "\0\s[20]\b[2]桃红色风信子：代表热情\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.hya_6
+{
+ "\0\s[20]\b[2]粉色风信子：淡雅清香\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.hya_7
+{
+ "\0\s[20]\b[2]黄色风信子：我很幸福\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.hya_8
+{
+ "\0\s[20]\b[2]蓝色风信子：高贵浓郁\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.hya_9
+{
+ "\0\s[20]\b[2]深蓝色风信子：因爱而有些忧郁\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+//==============牵牛花==========================================================================================================
+Select.Choisy_1
+{
+ "\0\s[20]\b[2]牵牛花：爱情、冷静、虚幻\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.Choisy_2
+{
+ "\0\s[20]\b[2]矮牵牛：安全感、与你同心、有你,我就觉得温馨\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.Choisy_3
+{
+ "\0\s[20]\b[2]爱丽丝：勇于追求爱情、稳重\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+//==============樱花==========================================================================================================
+Select.Sakura_1
+{
+ "\0\s[20]\b[2]樱花：生命、幸福一生一世永不放弃，一生一世只爱你，命运的法则就是循环\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.Sakura_2
+{
+ "\0\s[20]\b[2]山樱：向你微笑、精神美\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.Sakura_3
+{
+ "\0\s[20]\b[2]西洋樱花：善良的教育\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.Sakura_4
+{
+ "\0\s[20]\b[2]冬樱花：东方的神秘\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.Sakura_5
+{
+ "\0\s[20]\b[2]重瓣樱花：文静\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.Sakura_6
+{
+ "\0\s[20]\b[2]樱花草：青春\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.Sakura_7
+{
+ "\0\s[20]\b[2]山樱花：纯洁/高尚/淡薄\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+//==============虞美人==========================================================================================================
+Select.poppy_1
+{
+ "\0\s[20]\b[2]虞美人:安慰，遗忘，休息\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.poppy_2
+{
+ "\0\s[20]\b[2]红色虞美人：虚荣\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.poppy_3
+{
+ "\0\s[20]\b[2]白色虞美人：睡眠\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.poppy_4
+{
+ "\0\s[20]\b[2]淡红虞美人：安慰\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.poppy_5
+{
+ "\0\s[20]\b[2]深红虞美人：狂热，梦想\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+//==============桔梗==========================================================================================================
+Select.kikyou_1
+{
+ "\0\s[20]\b[2]桔梗：永恒的爱、无望的爱\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.kikyou_2
+{
+ "\0\s[20]\b[2]丸叶桔梗：屈服、悲伤\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+//==============石竹==========================================================================================================
+Select.CP_0
+{
+ "\0\s[20]\b[2]石竹：纯洁的爱、才能、大胆、女性美\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.CP_1
+{
+ "\0\s[20]\b[2]丁香石竹：大胆、积极\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.CP_2
+{
+ "\0\s[20]\b[2]五彩石竹：女性美\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.CP_3
+{
+ "\0\s[20]\b[2]香石竹：热心\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+//==============其他花==========================================================================================================
+Select.others_0
+{
+ "\0\s[20]\b[2]百日草：思念亡友、爱\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_1
+{
+ "\0\s[20]\b[2]薄荷：再爱我一次\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_2
+{
+ "\0\s[20]\b[2]薄雪草：念念不忘\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_3
+{
+ "\0\s[20]\b[2]柏树：永葆青春\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_4
+{
+ "\0\s[20]\b[2]并蒂莲：夫妻恩爱\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_5
+{
+ "\0\s[20]\b[2]薰衣草：等待爱情、永远的孤独\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_6
+{
+ "\0\s[20]\b[2]天堂鸟：潇洒、多情公子\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_7
+{
+ "\0\s[20]\b[2]向日葵：爱慕、光辉、忠诚\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_8
+{
+ "\0\s[20]\b[2]山茶花：可爱、谦让、理想的爱、了不起的魅力\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_9
+{
+ "\0\s[20]\b[2]三色堇：沉思、请想念我\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_10
+{
+ "\0\s[20]\b[2]玛格丽特：骄傲、满意、喜悦\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_11
+{
+ "\0\s[20]\b[2]曼珠沙华（红色彼岸花）:悲伤的回忆\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_12
+{
+ "\0\s[20]\b[2]火绒草：重要的回忆\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_13
+{
+ "\0\s[20]\b[2]荷花：清白、高尚而谦虚；无邪、得不到的爱；君子\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_14
+{
+ "\0\s[20]\b[2]玉兰花：报恩\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_15
+{
+ "\0\s[20]\b[2]茉莉花：忠贞、尊敬、清纯、贞洁、质朴、玲珑、迷人、官能的、你是我的\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_16
+{
+ "\0\s[20]\b[2]水仙菖：爱的枷锁\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_17
+{
+ "\0\s[20]\b[2]晚香玉：危险的欢愉\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_18
+{
+ "\0\s[20]\b[2]香罗兰：困境中保持贞节\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_19
+{
+ "\0\s[20]\b[2]吊兰：朴实、天真、淡雅、纯洁、希望、宁静\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_20
+{
+ "\0\s[20]\b[2]柽柳：罪\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_21
+{
+ "\0\s[20]\b[2]枸橼：不懂幽默的美人\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_22
+{
+ "\0\s[20]\b[2]火鹤：燃烧的心，热情，烦恼，关怀\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_23
+{
+ "\0\s[20]\b[2]菖蒲：信仰者的幸福\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_24
+{
+ "\0\s[20]\b[2]栀子：“喜悦”，就如生机盎然的夏天充满了未知的希望和喜悦\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+Select.others_25
+{
+ "\0\s[20]\b[2]喜迎贵客、好客\n\n/
+  \q[◇返回,ReturnF]\n/
+  \q[◇取消,FlowerCancel]\e" 
+}
+
+//------ 诞生花 ------------------
+
+Select.BirthdayFlower
+{
+	"\0\s[0]嗯，想看几月份的？\n\n\q[ 1月,BirthdayFlower_1]\_q　　　\_q\q[ 2月,BirthdayFlower_2]\_q　　　\_q\q[ 3月,BirthdayFlower_3]\n\q[ 4月,BirthdayFlower_4]\_q　　　\_q\q[ 5月,BirthdayFlower_5]\_q　　　\_q\q[ 6月,BirthdayFlower_6]\n\q[ 7月,BirthdayFlower_7]\_q　　　\_q\q[ 8月,BirthdayFlower_8]\_q　　　\_q\q[ 9月,BirthdayFlower_9]\n\q[10月,BirthdayFlower_10]\_q　　　\_q\q[11月,BirthdayFlower_11]\_q　　　\_q\q[12月,BirthdayFlower_12]\n\n[half]\q[取消,MenuCancel]\e"
+}
+Select.BirthdayFlower_1
+{
+	"\_q1月――\_q\n\q[ 1日,BirthdayFlower_0101]\_q　　\_q\q[ 2日,BirthdayFlower_0102]\_q　　\_q\q[ 3日,BirthdayFlower_0103]\_q　　\_q\q[ 4日,BirthdayFlower_0104]\_q　　\_q\q[ 5日,BirthdayFlower_0105]\n\q[ 6日,BirthdayFlower_0106]\_q　　\_q\q[ 7日,BirthdayFlower_0107]\_q　　\_q\q[ 8日,BirthdayFlower_0108]\_q　　\_q\q[ 9日,BirthdayFlower_0109]\_q　　\_q\q[10日,BirthdayFlower_0110]\n\q[11日,BirthdayFlower_0111]\_q　　\_q\q[12日,BirthdayFlower_0112]\_q　　\_q\q[13日,BirthdayFlower_0113]\_q　　\_q\q[14日,BirthdayFlower_0114]\_q　　\_q\q[15日,BirthdayFlower_0115]\n\q[16日,BirthdayFlower_0116]\_q　　\_q\q[17日,BirthdayFlower_0117]\_q　　\_q\q[18日,BirthdayFlower_0118]\_q　　\_q\q[19日,BirthdayFlower_0119]\_q　　\_q\q[20日,BirthdayFlower_0120]\n\q[21日,BirthdayFlower_0121]\_q　　\_q\q[22日,BirthdayFlower_0122]\_q　　\_q\q[23日,BirthdayFlower_0123]\_q　　\_q\q[24日,BirthdayFlower_0124]\_q　　\_q\q[25日,BirthdayFlower_0125]\n\q[26日,BirthdayFlower_0126]\_q　　\_q\q[27日,BirthdayFlower_0127]\_q　　\_q\q[28日,BirthdayFlower_0128]\_q　　\_q\q[29日,BirthdayFlower_0129]\_q　　\_q\q[30日,BirthdayFlower_0130]\_q　　\_q\q[31日,BirthdayFlower_0131]\n\n[half]\q[取消,BirthdayFlower]\e"
+}
+Select.BirthdayFlower_2
+{
+	"\_q2月――\_q\n\q[ 1日,BirthdayFlower_0201]\_q　　\_q\q[ 2日,BirthdayFlower_0202]\_q　　\_q\q[ 3日,BirthdayFlower_0203]\_q　　\_q\q[ 4日,BirthdayFlower_0204]\_q　　\_q\q[ 5日,BirthdayFlower_0205]\n\q[ 6日,BirthdayFlower_0206]\_q　　\_q\q[ 7日,BirthdayFlower_0207]\_q　　\_q\q[ 8日,BirthdayFlower_0208]\_q　　\_q\q[ 9日,BirthdayFlower_0209]\_q　　\_q\q[10日,BirthdayFlower_0210]\n\q[11日,BirthdayFlower_0211]\_q　　\_q\q[12日,BirthdayFlower_0212]\_q　　\_q\q[13日,BirthdayFlower_0213]\_q　　\_q\q[14日,BirthdayFlower_0214]\_q　　\_q\q[15日,BirthdayFlower_0215]\n\q[16日,BirthdayFlower_0216]\_q　　\_q\q[17日,BirthdayFlower_0217]\_q　　\_q\q[18日,BirthdayFlower_0218]\_q　　\_q\q[19日,BirthdayFlower_0219]\_q　　\_q\q[20日,BirthdayFlower_0220]\n\q[21日,BirthdayFlower_0221]\_q　　\_q\q[22日,BirthdayFlower_0222]\_q　　\_q\q[23日,BirthdayFlower_0223]\_q　　\_q\q[24日,BirthdayFlower_0224]\_q　　\_q\q[25日,BirthdayFlower_0225]\n\q[26日,BirthdayFlower_0226]\_q　　\_q\q[27日,BirthdayFlower_0227]\_q　　\_q\q[28日,BirthdayFlower_0228]\_q　　\_q\q[29日,BirthdayFlower_0229]\n\n[half]\q[取消,BirthdayFlower]\e"
+}
+Select.BirthdayFlower_3
+{
+	"\_q3月――\_q\n\q[ 1日,BirthdayFlower_0301]\_q　　\_q\q[ 2日,BirthdayFlower_0302]\_q　　\_q\q[ 3日,BirthdayFlower_0303]\_q　　\_q\q[ 4日,BirthdayFlower_0304]\_q　　\_q\q[ 5日,BirthdayFlower_0305]\n\q[ 6日,BirthdayFlower_0306]\_q　　\_q\q[ 7日,BirthdayFlower_0307]\_q　　\_q\q[ 8日,BirthdayFlower_0308]\_q　　\_q\q[ 9日,BirthdayFlower_0309]\_q　　\_q\q[10日,BirthdayFlower_0310]\n\q[11日,BirthdayFlower_0311]\_q　　\_q\q[12日,BirthdayFlower_0312]\_q　　\_q\q[13日,BirthdayFlower_0313]\_q　　\_q\q[14日,BirthdayFlower_0314]\_q　　\_q\q[15日,BirthdayFlower_0315]\n\q[16日,BirthdayFlower_0316]\_q　　\_q\q[17日,BirthdayFlower_0317]\_q　　\_q\q[18日,BirthdayFlower_0318]\_q　　\_q\q[19日,BirthdayFlower_0319]\_q　　\_q\q[20日,BirthdayFlower_0320]\n\q[21日,BirthdayFlower_0321]\_q　　\_q\q[22日,BirthdayFlower_0322]\_q　　\_q\q[23日,BirthdayFlower_0323]\_q　　\_q\q[24日,BirthdayFlower_0324]\_q　　\_q\q[25日,BirthdayFlower_0325]\n\q[26日,BirthdayFlower_0326]\_q　　\_q\q[27日,BirthdayFlower_0327]\_q　　\_q\q[28日,BirthdayFlower_0328]\_q　　\_q\q[29日,BirthdayFlower_0329]\_q　　\_q\q[30日,BirthdayFlower_0330]\_q　　\_q\q[31日,BirthdayFlower_0331]\n\n[half]\q[取消,BirthdayFlower]\e"
+}
+Select.BirthdayFlower_4
+{
+	"\_q4月――\_q\n\q[ 1日,BirthdayFlower_0401]\_q　　\_q\q[ 2日,BirthdayFlower_0402]\_q　　\_q\q[ 3日,BirthdayFlower_0403]\_q　　\_q\q[ 4日,BirthdayFlower_0404]\_q　　\_q\q[ 5日,BirthdayFlower_0405]\n\q[ 6日,BirthdayFlower_0406]\_q　　\_q\q[ 7日,BirthdayFlower_0407]\_q　　\_q\q[ 8日,BirthdayFlower_0408]\_q　　\_q\q[ 9日,BirthdayFlower_0409]\_q　　\_q\q[10日,BirthdayFlower_0410]\n\q[11日,BirthdayFlower_0411]\_q　　\_q\q[12日,BirthdayFlower_0412]\_q　　\_q\q[13日,BirthdayFlower_0413]\_q　　\_q\q[14日,BirthdayFlower_0414]\_q　　\_q\q[15日,BirthdayFlower_0415]\n\q[16日,BirthdayFlower_0416]\_q　　\_q\q[17日,BirthdayFlower_0417]\_q　　\_q\q[18日,BirthdayFlower_0418]\_q　　\_q\q[19日,BirthdayFlower_0419]\_q　　\_q\q[20日,BirthdayFlower_0420]\n\q[21日,BirthdayFlower_0421]\_q　　\_q\q[22日,BirthdayFlower_0422]\_q　　\_q\q[23日,BirthdayFlower_0423]\_q　　\_q\q[24日,BirthdayFlower_0424]\_q　　\_q\q[25日,BirthdayFlower_0425]\n\q[26日,BirthdayFlower_0426]\_q　　\_q\q[27日,BirthdayFlower_0427]\_q　　\_q\q[28日,BirthdayFlower_0428]\_q　　\_q\q[29日,BirthdayFlower_0429]\_q　　\_q\q[30日,BirthdayFlower_0430]\n\n[half]\q[取消,BirthdayFlower]\e"
+}
+Select.BirthdayFlower_5
+{
+	"\_q5月――\_q\n\q[ 1日,BirthdayFlower_0501]\_q　　\_q\q[ 2日,BirthdayFlower_0502]\_q　　\_q\q[ 3日,BirthdayFlower_0503]\_q　　\_q\q[ 4日,BirthdayFlower_0504]\_q　　\_q\q[ 5日,BirthdayFlower_0505]\n\q[ 6日,BirthdayFlower_0506]\_q　　\_q\q[ 7日,BirthdayFlower_0507]\_q　　\_q\q[ 8日,BirthdayFlower_0508]\_q　　\_q\q[ 9日,BirthdayFlower_0509]\_q　　\_q\q[10日,BirthdayFlower_0510]\n\q[11日,BirthdayFlower_0511]\_q　　\_q\q[12日,BirthdayFlower_0512]\_q　　\_q\q[13日,BirthdayFlower_0513]\_q　　\_q\q[14日,BirthdayFlower_0514]\_q　　\_q\q[15日,BirthdayFlower_0515]\n\q[16日,BirthdayFlower_0516]\_q　　\_q\q[17日,BirthdayFlower_0517]\_q　　\_q\q[18日,BirthdayFlower_0518]\_q　　\_q\q[19日,BirthdayFlower_0519]\_q　　\_q\q[20日,BirthdayFlower_0520]\n\q[21日,BirthdayFlower_0521]\_q　　\_q\q[22日,BirthdayFlower_0522]\_q　　\_q\q[23日,BirthdayFlower_0523]\_q　　\_q\q[24日,BirthdayFlower_0524]\_q　　\_q\q[25日,BirthdayFlower_0525]\n\q[26日,BirthdayFlower_0526]\_q　　\_q\q[27日,BirthdayFlower_0527]\_q　　\_q\q[28日,BirthdayFlower_0528]\_q　　\_q\q[29日,BirthdayFlower_0529]\_q　　\_q\q[30日,BirthdayFlower_0530]\_q　　\_q\q[31日,BirthdayFlower_0531]\n\n[half]\q[取消,BirthdayFlower]\e"
+}
+Select.BirthdayFlower_6
+{
+	"\_q6月――\_q\n\q[ 1日,BirthdayFlower_0601]\_q　　\_q\q[ 2日,BirthdayFlower_0602]\_q　　\_q\q[ 3日,BirthdayFlower_0603]\_q　　\_q\q[ 4日,BirthdayFlower_0604]\_q　　\_q\q[ 5日,BirthdayFlower_0605]\n\q[ 6日,BirthdayFlower_0606]\_q　　\_q\q[ 7日,BirthdayFlower_0607]\_q　　\_q\q[ 8日,BirthdayFlower_0608]\_q　　\_q\q[ 9日,BirthdayFlower_0609]\_q　　\_q\q[10日,BirthdayFlower_0610]\n\q[11日,BirthdayFlower_0611]\_q　　\_q\q[12日,BirthdayFlower_0612]\_q　　\_q\q[13日,BirthdayFlower_0613]\_q　　\_q\q[14日,BirthdayFlower_0614]\_q　　\_q\q[15日,BirthdayFlower_0615]\n\q[16日,BirthdayFlower_0616]\_q　　\_q\q[17日,BirthdayFlower_0617]\_q　　\_q\q[18日,BirthdayFlower_0618]\_q　　\_q\q[19日,BirthdayFlower_0619]\_q　　\_q\q[20日,BirthdayFlower_0620]\n\q[21日,BirthdayFlower_0621]\_q　　\_q\q[22日,BirthdayFlower_0622]\_q　　\_q\q[23日,BirthdayFlower_0623]\_q　　\_q\q[24日,BirthdayFlower_0624]\_q　　\_q\q[25日,BirthdayFlower_0625]\n\q[26日,BirthdayFlower_0626]\_q　　\_q\q[27日,BirthdayFlower_0627]\_q　　\_q\q[28日,BirthdayFlower_0628]\_q　　\_q\q[29日,BirthdayFlower_0629]\_q　　\_q\q[30日,BirthdayFlower_0630]\n\n[half]\q[取消,BirthdayFlower]\e"
+}
+Select.BirthdayFlower_7
+{
+	"\_q7月――\_q\n\q[ 1日,BirthdayFlower_0701]\_q　　\_q\q[ 2日,BirthdayFlower_0702]\_q　　\_q\q[ 3日,BirthdayFlower_0703]\_q　　\_q\q[ 4日,BirthdayFlower_0704]\_q　　\_q\q[ 5日,BirthdayFlower_0705]\n\q[ 6日,BirthdayFlower_0706]\_q　　\_q\q[ 7日,BirthdayFlower_0707]\_q　　\_q\q[ 8日,BirthdayFlower_0708]\_q　　\_q\q[ 9日,BirthdayFlower_0709]\_q　　\_q\q[10日,BirthdayFlower_0710]\n\q[11日,BirthdayFlower_0711]\_q　　\_q\q[12日,BirthdayFlower_0712]\_q　　\_q\q[13日,BirthdayFlower_0713]\_q　　\_q\q[14日,BirthdayFlower_0714]\_q　　\_q\q[15日,BirthdayFlower_0715]\n\q[16日,BirthdayFlower_0716]\_q　　\_q\q[17日,BirthdayFlower_0717]\_q　　\_q\q[18日,BirthdayFlower_0718]\_q　　\_q\q[19日,BirthdayFlower_0719]\_q　　\_q\q[20日,BirthdayFlower_0720]\n\q[21日,BirthdayFlower_0721]\_q　　\_q\q[22日,BirthdayFlower_0722]\_q　　\_q\q[23日,BirthdayFlower_0723]\_q　　\_q\q[24日,BirthdayFlower_0724]\_q　　\_q\q[25日,BirthdayFlower_0725]\n\q[26日,BirthdayFlower_0726]\_q　　\_q\q[27日,BirthdayFlower_0727]\_q　　\_q\q[28日,BirthdayFlower_0728]\_q　　\_q\q[29日,BirthdayFlower_0729]\_q　　\_q\q[30日,BirthdayFlower_0730]\_q　　\_q\q[31日,BirthdayFlower_0731]\n\n[half]\q[取消,BirthdayFlower]\e"
+}
+Select.BirthdayFlower_8
+{
+	"\_q8月――\_q\n\q[ 1日,BirthdayFlower_0801]\_q　　\_q\q[ 2日,BirthdayFlower_0802]\_q　　\_q\q[ 3日,BirthdayFlower_0803]\_q　　\_q\q[ 4日,BirthdayFlower_0804]\_q　　\_q\q[ 5日,BirthdayFlower_0805]\n\q[ 6日,BirthdayFlower_0806]\_q　　\_q\q[ 7日,BirthdayFlower_0807]\_q　　\_q\q[ 8日,BirthdayFlower_0808]\_q　　\_q\q[ 9日,BirthdayFlower_0809]\_q　　\_q\q[10日,BirthdayFlower_0810]\n\q[11日,BirthdayFlower_0811]\_q　　\_q\q[12日,BirthdayFlower_0812]\_q　　\_q\q[13日,BirthdayFlower_0813]\_q　　\_q\q[14日,BirthdayFlower_0814]\_q　　\_q\q[15日,BirthdayFlower_0815]\n\q[16日,BirthdayFlower_0816]\_q　　\_q\q[17日,BirthdayFlower_0817]\_q　　\_q\q[18日,BirthdayFlower_0818]\_q　　\_q\q[19日,BirthdayFlower_0819]\_q　　\_q\q[20日,BirthdayFlower_0820]\n\q[21日,BirthdayFlower_0821]\_q　　\_q\q[22日,BirthdayFlower_0822]\_q　　\_q\q[23日,BirthdayFlower_0823]\_q　　\_q\q[24日,BirthdayFlower_0824]\_q　　\_q\q[25日,BirthdayFlower_0825]\n\q[26日,BirthdayFlower_0826]\_q　　\_q\q[27日,BirthdayFlower_0827]\_q　　\_q\q[28日,BirthdayFlower_0828]\_q　　\_q\q[29日,BirthdayFlower_0829]\_q　　\_q\q[30日,BirthdayFlower_0830]\_q　　\_q\q[31日,BirthdayFlower_0831]\n\n[half]\q[取消,BirthdayFlower]\e"
+}
+Select.BirthdayFlower_9
+{
+	"\_q9月――\_q\n\q[ 1日,BirthdayFlower_0901]\_q　　\_q\q[ 2日,BirthdayFlower_0902]\_q　　\_q\q[ 3日,BirthdayFlower_0903]\_q　　\_q\q[ 4日,BirthdayFlower_0904]\_q　　\_q\q[ 5日,BirthdayFlower_0905]\n\q[ 6日,BirthdayFlower_0906]\_q　　\_q\q[ 7日,BirthdayFlower_0907]\_q　　\_q\q[ 8日,BirthdayFlower_0908]\_q　　\_q\q[ 9日,BirthdayFlower_0909]\_q　　\_q\q[10日,BirthdayFlower_0910]\n\q[11日,BirthdayFlower_0911]\_q　　\_q\q[12日,BirthdayFlower_0912]\_q　　\_q\q[13日,BirthdayFlower_0913]\_q　　\_q\q[14日,BirthdayFlower_0914]\_q　　\_q\q[15日,BirthdayFlower_0915]\n\q[16日,BirthdayFlower_0916]\_q　　\_q\q[17日,BirthdayFlower_0917]\_q　　\_q\q[18日,BirthdayFlower_0918]\_q　　\_q\q[19日,BirthdayFlower_0919]\_q　　\_q\q[20日,BirthdayFlower_0920]\n\q[21日,BirthdayFlower_0921]\_q　　\_q\q[22日,BirthdayFlower_0922]\_q　　\_q\q[23日,BirthdayFlower_0923]\_q　　\_q\q[24日,BirthdayFlower_0924]\_q　　\_q\q[25日,BirthdayFlower_0925]\n\q[26日,BirthdayFlower_0926]\_q　　\_q\q[27日,BirthdayFlower_0927]\_q　　\_q\q[28日,BirthdayFlower_0928]\_q　　\_q\q[29日,BirthdayFlower_0929]\_q　　\_q\q[30日,BirthdayFlower_0930]\n\n[half]\q[取消,BirthdayFlower]\e"
+}
+Select.BirthdayFlower_10
+{
+	"\_q10月――\_q\n\q[ 1日,BirthdayFlower_1001]\_q　　\_q\q[ 2日,BirthdayFlower_1002]\_q　　\_q\q[ 3日,BirthdayFlower_1003]\_q　　\_q\q[ 4日,BirthdayFlower_1004]\_q　　\_q\q[ 5日,BirthdayFlower_1005]\n\q[ 6日,BirthdayFlower_1006]\_q　　\_q\q[ 7日,BirthdayFlower_1007]\_q　　\_q\q[ 8日,BirthdayFlower_1008]\_q　　\_q\q[ 9日,BirthdayFlower_1009]\_q　　\_q\q[10日,BirthdayFlower_1010]\n\q[11日,BirthdayFlower_1011]\_q　　\_q\q[12日,BirthdayFlower_1012]\_q　　\_q\q[13日,BirthdayFlower_1013]\_q　　\_q\q[14日,BirthdayFlower_1014]\_q　　\_q\q[15日,BirthdayFlower_1015]\n\q[16日,BirthdayFlower_1016]\_q　　\_q\q[17日,BirthdayFlower_1017]\_q　　\_q\q[18日,BirthdayFlower_1018]\_q　　\_q\q[19日,BirthdayFlower_1019]\_q　　\_q\q[20日,BirthdayFlower_1020]\n\q[21日,BirthdayFlower_1021]\_q　　\_q\q[22日,BirthdayFlower_1022]\_q　　\_q\q[23日,BirthdayFlower_1023]\_q　　\_q\q[24日,BirthdayFlower_1024]\_q　　\_q\q[25日,BirthdayFlower_1025]\n\q[26日,BirthdayFlower_1026]\_q　　\_q\q[27日,BirthdayFlower_1027]\_q　　\_q\q[28日,BirthdayFlower_1028]\_q　　\_q\q[29日,BirthdayFlower_1029]\_q　　\_q\q[30日,BirthdayFlower_1030]\_q　　\_q\q[31日,BirthdayFlower_1031]\n\n[half]\q[取消,BirthdayFlower]\e"
+}
+Select.BirthdayFlower_11
+{
+	"\_q11月――\_q\n\q[ 1日,BirthdayFlower_1101]\_q　　\_q\q[ 2日,BirthdayFlower_1102]\_q　　\_q\q[ 3日,BirthdayFlower_1103]\_q　　\_q\q[ 4日,BirthdayFlower_1104]\_q　　\_q\q[ 5日,BirthdayFlower_1105]\n\q[ 6日,BirthdayFlower_1106]\_q　　\_q\q[ 7日,BirthdayFlower_1107]\_q　　\_q\q[ 8日,BirthdayFlower_1108]\_q　　\_q\q[ 9日,BirthdayFlower_1109]\_q　　\_q\q[10日,BirthdayFlower_1110]\n\q[11日,BirthdayFlower_1111]\_q　　\_q\q[12日,BirthdayFlower_1112]\_q　　\_q\q[13日,BirthdayFlower_1113]\_q　　\_q\q[14日,BirthdayFlower_1114]\_q　　\_q\q[15日,BirthdayFlower_1115]\n\q[16日,BirthdayFlower_1116]\_q　　\_q\q[17日,BirthdayFlower_1117]\_q　　\_q\q[18日,BirthdayFlower_1118]\_q　　\_q\q[19日,BirthdayFlower_1119]\_q　　\_q\q[20日,BirthdayFlower_1120]\n\q[21日,BirthdayFlower_1121]\_q　　\_q\q[22日,BirthdayFlower_1122]\_q　　\_q\q[23日,BirthdayFlower_1123]\_q　　\_q\q[24日,BirthdayFlower_1124]\_q　　\_q\q[25日,BirthdayFlower_1125]\n\q[26日,BirthdayFlower_1126]\_q　　\_q\q[27日,BirthdayFlower_1127]\_q　　\_q\q[28日,BirthdayFlower_1128]\_q　　\_q\q[29日,BirthdayFlower_1129]\_q　　\_q\q[30日,BirthdayFlower_1130]\n\n[half]\q[取消,BirthdayFlower]\e"
+}
+Select.BirthdayFlower_12
+{
+	"\_q12月――\_q\n\q[ 1日,BirthdayFlower_1201]\_q　　\_q\q[ 2日,BirthdayFlower_1202]\_q　　\_q\q[ 3日,BirthdayFlower_1203]\_q　　\_q\q[ 4日,BirthdayFlower_1204]\_q　　\_q\q[ 5日,BirthdayFlower_1205]\n\q[ 6日,BirthdayFlower_1206]\_q　　\_q\q[ 7日,BirthdayFlower_1207]\_q　　\_q\q[ 8日,BirthdayFlower_1208]\_q　　\_q\q[ 9日,BirthdayFlower_1209]\_q　　\_q\q[10日,BirthdayFlower_1210]\n\q[11日,BirthdayFlower_1211]\_q　　\_q\q[12日,BirthdayFlower_1212]\_q　　\_q\q[13日,BirthdayFlower_1213]\_q　　\_q\q[14日,BirthdayFlower_1214]\_q　　\_q\q[15日,BirthdayFlower_1215]\n\q[16日,BirthdayFlower_1216]\_q　　\_q\q[17日,BirthdayFlower_1217]\_q　　\_q\q[18日,BirthdayFlower_1218]\_q　　\_q\q[19日,BirthdayFlower_1219]\_q　　\_q\q[20日,BirthdayFlower_1220]\n\q[21日,BirthdayFlower_1221]\_q　　\_q\q[22日,BirthdayFlower_1222]\_q　　\_q\q[23日,BirthdayFlower_1223]\_q　　\_q\q[24日,BirthdayFlower_1224]\_q　　\_q\q[25日,BirthdayFlower_1225]\n\q[26日,BirthdayFlower_1226]\_q　　\_q\q[27日,BirthdayFlower_1227]\_q　　\_q\q[28日,BirthdayFlower_1228]\_q　　\_q\q[29日,BirthdayFlower_1229]\_q　　\_q\q[30日,BirthdayFlower_1230]\_q　　\_q\q[31日,BirthdayFlower_1231]\n\n[half]\q[取消,BirthdayFlower]\e"
+}
+
+//---- 1月 ----------------------------------------------------------
+
+Select.BirthdayFlower_0101
+{
+	"\0\s[20]1月1日的诞生花。\n\n雪莲花\n（Snow Drop）\n纯白的爱\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0102
+{
+	"\0\s[20]1月2日的诞生花。\n\n黄水仙\n（Narcisus Jonquilla）\n神秘\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0103
+{
+	"\0\s[20]1月3日的诞生花。\n\n藏红花\n（Spring Crocus）\n执著\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0104
+{
+	"\0\s[20]1月4日的诞生花。\n\n风信子\n（Hyacinth）\n游戏人生\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0105
+{
+	"\0\s[20]1月5日的诞生花。\n\n雪割草\n（hepatica）\n耐心\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0106
+{
+	"\0\s[20]1月6日的诞生花。\n\n白色紫罗兰\n（Violet）\n洁白无瑕的爱\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0107
+{
+	"\0\s[20]1月7日的诞生花。\n\n白色郁金香\n（Tulip）\n单恋\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0108
+{
+	"\0\s[20]1月8日的诞生花。\n\n紫色紫罗兰\n（Violet）\n爱情\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0109
+{
+	"\0\s[20]1月9日的诞生花。\n\n紫罗兰\n（Voilet）\n纯朴\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0110
+{
+	"\0\s[20]1月10日的诞生花。\n\n黄杨\n（Box-Tree）\n不屈不挠\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0111
+{
+	"\0\s[20]1月11日的诞生花。\n\n匀桧叶\n（Arbor-Vitae）\n善良\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0112
+{
+	"\0\s[20]1月12日的诞生花。\n\n庭荠\n（Sweet Alyssum）\n优雅\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0113
+{
+	"\0\s[20]1月13日的诞生花。\n\n水仙\n（Narcissus）\n自我\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0114
+{
+	"\0\s[20]1月14日的诞生花。\n\n报春花\n（Cyclamen）\n含羞\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0115
+{
+	"\0\s[20]1月15日的诞生花。\n\n剌竹\n（Thorn）\n严格\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0116
+{
+	"\0\s[20]1月16日的诞生花。\n\n风信子\n（Hyacinth）\n竞争\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0117
+{
+	"\0\s[20]1月17日的诞生花。\n\n酸模\n（Sorrel）\n挚爱\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0118
+{
+	"\0\s[20]1月18日的诞生花。\n\n印度锦葵\n（Indian Mallow）\n猜测\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0119
+{
+	"\0\s[20]1月19日的诞生花。\n\n长寿松\n（Pine）\n健康\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0120
+{
+	"\0\s[20]1月20日的诞生花。\n\n金凤花\n（Butter Cup）\n童真\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0121
+{
+	"\0\s[20]1月21日的诞生花。\n\nアイビー\nユキヤナギ\nロウバイ\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0122
+{
+	"\0\s[20]1月22日的诞生花。\n\n苔藓\n（Moss）\n母爱\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0123
+{
+	"\0\s[20]1月23日的诞生花。\n\n芦荟\n（Bulrush）\n服从\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0124
+{
+	"\0\s[20]1月24日的诞生花。\n\n番红花\n（Saffron Crocus）\n进退得宜\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0125
+{
+	"\0\s[20]1月25日的诞生花。\n\n鼠耳草\n（Cerasrium）\n纯真\nミミナ草\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0126
+{
+	"\0\s[20]1月26日的诞生花。\n\n含羞草\n（Humble Plant）\n敏感\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0127
+{
+	"\0\s[20]1月27日的诞生花。\n\n七度灶\n（Mountain Ash）\n坚固\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0128
+{
+	"\0\s[20]1月28日的诞生花。\n\n黑色白杨木\n（Black Piolar）\n勇气\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0129
+{
+	"\0\s[20]1月29日的诞生花。\n\n苔藓\n（Moss）\呵护\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0130
+{
+	"\0\s[20]1月30日的诞生花。\n\n金盏花\n（Marsh Marigold）\n盼望的幸福\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0131
+{
+	"\0\s[20]1月31日的诞生花。\n\n藏红花\n（Spring Crocus）\n青春喜悦\n\n[half]\q[◇返回,BirthdayFlower_1]\n\q[◇取消,FlowerCancel]\e"
+}
+
+//---- 2月 ----------------------------------------------------------
+
+Select.BirthdayFlower_0201
+{
+	"\0\s[20]2月1日的诞生花。\n\nウメ\nサクラソウ\nマーガレット\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0202
+{
+	"\0\s[20]2月2日的诞生花。\n\n木瓜花\n（Japanese Quince）\n平凡\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0203
+{
+	"\0\s[20]2月3日的诞生花。\n\n小豆蔻\n（Cardamine）\n奉献\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0204
+{
+	"\0\s[20]2月4日的诞生花。\n\n红色樱草\n（Primrose）\n无悔的爱\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0205
+{
+	"\0\s[20]2月5日的诞生花。\n\n芍药\n（Paeonia lactiflora）\n迷人\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0206
+{
+	"\0\s[20]2月6日的诞生花。\n\n绒毛银莲花\n（Anemone tomentosa）\n勤力的管事\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0207
+{
+	"\0\s[20]2月7日的诞生花。\n\n毋忘草\n（Don't Forget Me）\n毋忘我\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0208
+{
+	"\0\s[20]2月8日的诞生花。\n\n虎耳草\n（Saxifrage）\n真切的爱情\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0209
+{
+	"\0\s[20]2月9日的诞生花。\n\n桃花\n（Prunus persica）\n爱情蜜语\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0210
+{
+	"\0\s[20]2月10日的诞生花。\n\n紫丁香\n（Winter Daphne）\n光荣\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0211
+{
+	"\0\s[20]2月11日的诞生花。\n\n垂盆草\n（Sedum sarmentosum）\n同情\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0212
+{
+	"\0\s[20]2月12日的诞生花。\n\n捕蝇草\n（Dionaea muscipula）\n狡黠\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0213
+{
+	"\0\s[20]2月13日的诞生花。\n\n三色堇\n（Viola tricolor var.hortensis）\n耐力持久\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0214
+{
+	"\0\s[20]2月14日的诞生花。\n\n荷兰菊\n（Aster novi-belgii）\n不畏艰苦\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0215
+{
+	"\0\s[20]2月15日的诞生花。\n\n含笑\n（Michelia figo M.fuscata）\n为你而生\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0216
+{
+	"\0\s[20]2月16日的诞生花。\n\n龙柏\n（Sabina chinensis ‘Kaizuca’）\n名誉\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0217
+{
+	"\0\s[20]2月17日的诞生花。\n\n狗尾红\n（Acalypha hispida）\n渴望自然\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0218
+{
+	"\0\s[20]2月18日的诞生花。\n\n红色金凤花\n（Butter Cup）\n孩子气\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0219
+{
+	"\0\s[20]2月19日的诞生花。\n\n榕树\n（Ficus microcarpa）\n友善可亲\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0220
+{
+	"\0\s[20]2月20日的诞生花。\n\n小叶丁香\n（Syringa microphylla）\n期望\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0221
+{
+	"\0\s[20]2月21日的诞生花。\n\n米兰\n（Aglaia odorata）\n爱心\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0222
+{
+	"\0\s[20]2月22日的诞生花。\n\n木槿\n（Rose of Sharon）\n纤美\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0223
+{
+	"\0\s[20]2月23日的诞生花。\n\n杏花\n（Prunus）\n娇羞\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0224
+{
+	"\0\s[20]2月24日的诞生花。\n\n长春花\n（Periwinkle）\n美丽的回忆\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0225
+{
+	"\0\s[20]2月25日的诞生花。\n\n麝香玫瑰\n（Musk Rose）\n善变\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0226
+{
+	"\0\s[20]2月26日的诞生花。\n\n红叶苋\n（Iresine herbstii）\n回忆\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0227
+{
+	"\0\s[20]2月27日的诞生花。\n\n玉兰\n（Magnolia denudata）\n单纯\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0228
+{
+	"\0\s[20]2月28日的诞生花。\n\n八仙花\n（Hydrangea macrophylla）\n同心协力\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0229
+{
+	"\0\s[20]2月29日的诞生花。\n\n石竹\n（Dianthus chinensis）\n关怀\n\n[half]\q[◇返回,BirthdayFlower_2]\n\q[◇取消,FlowerCancel]\e"
+}
+
+//---- 3月 ----------------------------------------------------------
+
+Select.BirthdayFlower_0301
+{
+	"\0\s[20]3月1日的诞生花。\n\n水仙\n（Daffodil）\n傲慢\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0302
+{
+	"\0\s[20]3月2日的诞生花。\n\n何氏凤仙\n（Impatiens wallerana）\n道德观\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0303
+{
+	"\0\s[20]3月3日的诞生花。\n\n紫花地丁\n（Viola chinensis）\n幸福\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0304
+{
+	"\0\s[20]3月4日的诞生花。\n\n木莓\n（Raspberry）\n爱情\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0305
+{
+	"\0\s[20]3月5日的诞生花。\n\n矢车菊\n（Corn Flower）\n幸福\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0306
+{
+	"\0\s[20]3月6日的诞生花。\n\n五色梅\n（Lantana camara）\n开朗\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0307
+{
+	"\0\s[20]3月7日的诞生花。\n\n金合欢\n（Acacia farnesiana）\n激情\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0308
+{
+	"\0\s[20]3月8日的诞生花。\n\n樱桃番\n（Lycopersiconesculentumvar.cerasiforme）\n真心\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0309
+{
+	"\0\s[20]3月9日的诞生花。\n\n旅人蕉\n（Ravenala madagascariensis）\n大无畏精神\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0310
+{
+	"\0\s[20]3月10日的诞生花。\n\n银杏\n（Ginkgo biloba）\n高贵\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0311
+{
+	"\0\s[20]3月11日的诞生花。\n\n菊苣\n（Chicory）\n慎重\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0312
+{
+	"\0\s[20]3月12日的诞生花。\n\n银芽柳\n（Salix gracilistyla）\n愁伤\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0313
+{
+	"\0\s[20]3月13日的诞生花。\n\n萱草\n（Day Lily）\n难忘的爱\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0314
+{
+	"\0\s[20]3月14日的诞生花。\n\n一串红\n（Salvia splendens）\n希望\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0315
+{
+	"\0\s[20]3月15日的诞生花。\n\n铁线蕨\n（Adiantum capillus-veneris）\n无悔\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0316
+{
+	"\0\s[20]3月16日的诞生花。\n\n薄荷\n（Mint）\n美德\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0317
+{
+	"\0\s[20]3月17日的诞生花。\n\n金橘\n（Citrus microcarpa）\n必然的幸福\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0318
+{
+	"\0\s[20]3月18日的诞生花。\n\n红槟榔\n（Cyrtostachys lakka）\n物尽其用\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0319
+{
+	"\0\s[20]3月19日的诞生花。\n\n栀子花\n（Cape Jasmine）\n喜悦\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0320
+{
+	"\0\s[20]3月20日的诞生花。\n\n郁金香\n（Tulip）\n永恒的爱\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0321
+{
+	"\0\s[20]3月21日的诞生花。\n\n嘉兰\n（Gloriosa superba）\n人生起点\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0322
+{
+	"\0\s[20]3月22日的诞生花。\n\n锦葵\n（Mallow）\n恩惠\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0323
+{
+	"\0\s[20]3月23日的诞生花。\n\n剑兰\n（Gladiolus）\n热恋\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0324
+{
+	"\0\s[20]3月24日的诞生花。\n\n加州罂栗花\n（California Poppy）\n希望\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0325
+{
+	"\0\s[20]3月25日的诞生花。\n\n紫藤\n（Wisteria sinensis）\n美丽\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0326
+{
+	"\0\s[20]3月26日的诞生花。\n\n四季樱草\n（Primula obconica）\n初恋\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0327
+{
+	"\0\s[20]3月27日的诞生花。\n\n荷包花\n（Calceolaria）\n援助\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0328
+{
+	"\0\s[20]3月28日的诞生花。\n\n荷花\n（Nelumbo nucifera）\n高尚\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0329
+{
+	"\0\s[20]3月29日的诞生花。\n\n随意草\n（Physostegia virginiana）\n烦扰\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0330
+{
+	"\0\s[20]3月30日的诞生花。\n\n水葱\n（Scirpus tabernaemontani）\n整洁\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0331
+{
+	"\0\s[20]3月31日的诞生花。\n\n蝴蝶兰\n（Phalaenopsis）\n梦幻爱情\n\n[half]\q[◇返回,BirthdayFlower_3]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0401
+{
+	"\0\s[20]4月1日的诞生花。\n\n月季\n（Rosa cvs.）\n真爱\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0402
+{
+	"\0\s[20]4月2日的诞生花。\n\n牡丹\n（Paeonia suffruticosa）\n期待\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0403
+{
+	"\0\s[20]4月3日的诞生花。\n\n喇叭水仙\n（Doffodil）\n尊敬\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0404
+{
+	"\0\s[20]4月4日的诞生花。\n\n荷包牡丹\n（Dicentra spectabilis）\n爱\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0405
+{
+	"\0\s[20]4月5日的诞生花。\n\n无花果\n（Fig-Tree）\n丰富\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0406
+{
+	"\0\s[20]4月6日的诞生花。\n\n百合\n（Lilium spp.）\n无尽的幸福\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0407
+{
+	"\0\s[20]4月7日的诞生花。\n\n孔雀羊齿\n（Adiantum）\n精神\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0408
+{
+	"\0\s[20]4月8日的诞生花。\n\n佛手\n（Cutyrs neduca var,sarcidacttkus）\n仁善\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0409
+{
+	"\0\s[20]4月9日的诞生花。\n\n樱草\n（Cherry）\n精神恋爱\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0410
+{
+	"\0\s[20]4月10日的诞生花。\n\n长春花\n（Periwinkle）\n愉快回忆\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0411
+{
+	"\0\s[20]4月11日的诞生花。\n\n花菖蒲\n（Greek Jscob's-Ladder）\n等着你\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0412
+{
+	"\0\s[20]4月12日的诞生花。\n\n桃花\n（Peach Blossom） \n爱情俘虏\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0413
+{
+	"\0\s[20]4月13日的诞生花。\n\n波斯菊\n（Golden Wave）\n竞争\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0414
+{
+	"\0\s[20]4月14日的诞生花。\n\nアサガオ（白）\nウツギ\nドウダンツツジ\nモモ（花）\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0415
+{
+	"\0\s[20]4月15日的诞生花。\n\n紫薇\n（Lagerstroemia indica）\n美好\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0416
+{
+	"\0\s[20]4月16日的诞生花。\n\n郁金香\n（Tulip）\n美眸\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0417
+{
+	"\0\s[20]4月17日的诞生花。\n\n唐菖蒲\n（Gladiolus hortulanus）\n完美婚姻\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0418
+{
+	"\0\s[20]4月18日的诞生花。\n\n海棠\n（Malus spectabilis）\n感化\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0419
+{
+	"\0\s[20]4月19日的诞生花。\n\n飞燕草\n（Larkspur）\n清静\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0420
+{
+	"\0\s[20]4月20日的诞生花。\n\n睡莲\n（Nymphaea tetragona）\n舒情\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0421
+{
+	"\0\s[20]4月21日的诞生花。\n\n昙花\n（Epiphyllum oxypetalum）\n年轻的悲伤\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0422
+{
+	"\0\s[20]4月22日的诞生花。\n\n翠菊\n（China Aster）\n坚固的爱情\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0423
+{
+	"\0\s[20]4月23日的诞生花。\n\n桔梗\n（Balloom Flower）\n温文尔雅\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0424
+{
+	"\0\s[20]4月24日的诞生花。\n\n天竺葵\n（Geranium）\n决心\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0425
+{
+	"\0\s[20]4月25日的诞生花。\n\n王莲\n（Victoria amazonica）\n威严\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0426
+{
+	"\0\s[20]4月26日的诞生花。\n\n虞美人\n（Papaver rhoeas）\n激情\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0427
+{
+	"\0\s[20]4月27日的诞生花。\n\n二月兰\n（Orychophragmus viloaceus）\n清纯的心\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0428
+{
+	"\0\s[20]4月28日的诞生花。\n\n红色樱草花\n（Primrose）\n不悔\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0429
+{
+	"\0\s[20]4月29日的诞生花。\n\n粉红山茶花\n（Camellia）\n魅力\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0430
+{
+	"\0\s[20]4月30日的诞生花。\n\n蓝茉莉\n（Plumbago capensis）\n孤独之美\n\n[half]\q[◇返回,BirthdayFlower_4]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0501
+{
+	"\0\s[20]5月1日的诞生花。\n\n报春花\n（Cowslip）\n青春与愁伤\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0502
+{
+	"\0\s[20]5月2日的诞生花。\n\n金凤花\n（Butter Cup）\n童真\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0503
+{
+	"\0\s[20]5月3日的诞生花。\n\n蒲公英\n（Dandelion）\n忧虑\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0504
+{
+	"\0\s[20]5月4日的诞生花。\n\n合欢\n（Albizzia julibrissin）\n尊敬与爱情\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0505
+{
+	"\0\s[20]5月5日的诞生花。\n\n铃兰\n（May Lily）\n纤弱\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0506
+{
+	"\0\s[20]5月6日的诞生花。\n\n紫罗兰\n（Stock）\n永恒的美丽\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0507
+{
+	"\0\s[20]5月7日的诞生花。\n\n银合欢\n（Leucaena glauca）\n爱与尊敬\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0508
+{
+	"\0\s[20]5月8日的诞生花。\n\n吊兰\n（Chlorophytum comosum）\n清纯的心\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0509
+{
+	"\0\s[20]5月9日的诞生花。\n\n重瓣樱花\n（Double Cherry）\n文静\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0510
+{
+	"\0\s[20]5月10日的诞生花。\n\n紫荆\n（Cercis chinensis）\n优雅的心\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0511
+{
+	"\0\s[20]5月11日的诞生花。\n\n舞草\n（Codariocalyx gyrans）\n诱惑\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0512
+{
+	"\0\s[20]5月12日的诞生花。\n\n夜丁香\n（Syringa oblata var.affinis）\n爱情萌芽\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0513
+{
+	"\0\s[20]5月13日的诞生花。\n\n山楂\n（Hawthorn）\n唯一的爱\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0514
+{
+	"\0\s[20]5月14日的诞生花。\n\n耧斗草\n（Columbine）\n胜利之誓\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0515
+{
+	"\0\s[20]5月15日的诞生花。\n\n毋忘我\n（Forget-me-not）\n真爱\nワスレナグサ\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0516
+{
+	"\0\s[20]5月16日的诞生花。\n\n非洲菊\n（Gerbera jamesonii）\n宣言\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0517
+{
+	"\0\s[20]5月17日的诞生花。\n\n郁金香\n（Tulip）\n示爱\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0518
+{
+	"\0\s[20]5月18日的诞生花。\n\n粉色樱草\n（Oxlip）\n初恋\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0519
+{
+	"\0\s[20]5月19日的诞生花。\n\n　　\n（　　　　）\n　　　　\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0520
+{
+	"\0\s[20]5月20日的诞生花。\n\n扶桑\n（Hibiscus rosa-sinensis）\n璀璨的心\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0521
+{
+	"\0\s[20]5月21日的诞生花。\n\n淡红色飞燕草\n（Larkspur）\n自由\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0522
+{
+	"\0\s[20]5月22日的诞生花。\n\n倒挂金钟\n（Ear Drops）\n热烈的心\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0523
+{
+	"\0\s[20]5月23日的诞生花。\n\n木棉\n（Bombax malabaricum）\n初恋的回忆\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0524
+{
+	"\0\s[20]5月24日的诞生花。\n\n紫背万年青\n（Rhoeo spathacea）\n永恒的爱\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0525
+{
+	"\0\s[20]5月25日的诞生花。\n\n三色紫罗兰\n（Pansy）\n纯爱\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0526
+{
+	"\0\s[20]5月26日的诞生花。\n\n万年青\n（Rohdea japonica）\n和平\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0527
+{
+	"\0\s[20]5月27日的诞生花。\n\n雏菊\n（Daisy）\n纯真\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0528
+{
+	"\0\s[20]5月28日的诞生花。\n\n凤凰木\n（Delonix regia）\n美德\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0529
+{
+	"\0\s[20]5月29日的诞生花。\n\n中国无忧花\n（Saraca chinensis）\n快乐\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0530
+{
+	"\0\s[20]5月30日的诞生花。\n\n瓷玫瑰\n（Etlingera elatior）\n初发的爱情\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0531
+{
+	"\0\s[20]5月31日的诞生花。\n\n花亚麻\n（Linum grandiflora）\n忍耐\n\n[half]\q[◇返回,BirthdayFlower_5]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0601
+{
+	"\0\s[20]6月1日的诞生花。\n\n玫瑰\n（Maiden Blush Rose） \n你心知我心\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0602
+{
+	"\0\s[20]6月2日的诞生花。\n\n白皮松\n（Pinus bungeana）\n坦率\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0603
+{
+	"\0\s[20]6月3日的诞生花。\n\n亚麻花\n（Flax）\n感谢\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0604
+{
+	"\0\s[20]6月4日的诞生花。\n\n淡红玫瑰\n（Damask Rose）\n明艳照人\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0605
+{
+	"\0\s[20]6月5日的诞生花。\n\n橘万寿菊\n（Marigold）\n甜蜜的爱情\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0606
+{
+	"\0\s[20]6月6日的诞生花。\n\n金菖蒲\n（Yellow Iris）\n信者之福\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0607
+{
+	"\0\s[20]6月7日的诞生花。\n\n三角花\n（Bougainvillea spectabilis）\n爱慕之心\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0608
+{
+	"\0\s[20]6月8日的诞生花。\n\n茉莉花\n（Jasmine）\n迷人\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0609
+{
+	"\0\s[20]6月9日的诞生花。\n\n香豌豆花\n（sweet Pea）\n温柔的回忆\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0610
+{
+	"\0\s[20]6月10日的诞生花。\n\n红蓼\n（Polygonum orientale）\n荣耀\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0611
+{
+	"\0\s[20]6月11日的诞生花。\n\n大丽花\n（Dahlia spp）\n威严\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0612
+{
+	"\0\s[20]6月12日的诞生花。\n\n桂花\n（Osmanthus fragrans）\n魅力\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0613
+{
+	"\0\s[20]6月13日的诞生花。\n\n秋海棠\n（Begonia evansiana）\n深深思念\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0614
+{
+	"\0\s[20]6月14日的诞生花。\n\n南天竹\n（Nandina domestica）\n回忆\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0615
+{
+	"\0\s[20]6月15日的诞生花。\n\n红色的塑埃\n（arnation）\n热情\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0616
+{
+	"\0\s[20]6月16日的诞生花。\n\n夜来香\n（Rube Rose）\n反叛\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0617
+{
+	"\0\s[20]6月17日的诞生花。\n\n白蓿苜草\n（White Clover）\n感化\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0618
+{
+	"\0\s[20]6月18日的诞生花。\n\n九里香\n（Murraya paniculata）\n勇敢\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0619
+{
+	"\0\s[20]6月19日的诞生花。\n\n野玫瑰\n（Sweet Briar）\n爱情\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0620
+{
+	"\0\s[20]6月20日的诞生花。\n\n虎尾兰\n（Sansevieria trifasciata）\n成果\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0621
+{
+	"\0\s[20]6月21日的诞生花。\n\n月见草\n（Evening Primrose）\n不羁的心\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0622
+{
+	"\0\s[20]6月22日的诞生花。\n\n荚莲花\n（Viburnum）\n至死不渝的爱\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0623
+{
+	"\0\s[20]6月23日的诞生花。\n\n蜀葵\n（Hollyhock）\n热恋\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0624
+{
+	"\0\s[20]6月24日的诞生花。\n\n美女樱\n（Garden Verbena）\n和睦家庭\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0625
+{
+	"\0\s[20]6月25日的诞生花。\n\n矮牵牛\n（Petunia hybrida）\n虚幻的爱情\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0626
+{
+	"\0\s[20]6月26日的诞生花。\n\n白色紫丁香\n（Lilac）\n美丽的誓言\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0627
+{
+	"\0\s[20]6月27日的诞生花。\n\n垂花赫蕉\n（Heliconia rostrata）\n神圣的爱\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0628
+{
+	"\0\s[20]6月28日的诞生花。\n\n红萼水塔花\n（Billbergia rosea）\n幸福就在你身边\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0629
+{
+	"\0\s[20]6月29日的诞生花。\n\n天竺葵\n（Geranium）\n幸福\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0630
+{
+	"\0\s[20]6月30日的诞生花。\n\n鱼藤\n（Derris trifoliata）\n爱的羁绊\n\n[half]\q[◇返回,BirthdayFlower_6]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0701
+{
+	"\0\s[20]7月1日的诞生花。\n\n松果菊\n（Echinacea purpurea）\n怠惰\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0702
+{
+	"\0\s[20]7月2日的诞生花。\n\n金鱼草\n（Snap Dragon）\n严格\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0703
+{
+	"\0\s[20]7月3日的诞生花。\n\n白罂粟\n（Poppy）\n遗忘\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0704
+{
+	"\0\s[20]7月4日的诞生花。\n\n蛾蝶花\n（Schizanthus pinnatus）\n自然恋爱\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0705
+{
+	"\0\s[20]7月5日的诞生花。\n\n紫花夜丁香\n（Cestrum purpureum）\n芬芳\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0706
+{
+	"\0\s[20]7月6日的诞生花。\n\n波斯菊\n（Cosmos bipinnatus）\n爱慕\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0707
+{
+	"\0\s[20]7月7日的诞生花。\n\n醋粟花\n（Goose Berry）\n预测\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0708
+{
+	"\0\s[20]7月8日的诞生花。\n\n仙客来\n（Cyclamen persicum）\n重逢\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0709
+{
+	"\0\s[20]7月9日的诞生花。\n\n红桑\n（Acalypha wilkesiana）\n真爱\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0710
+{
+	"\0\s[20]7月10日的诞生花。\n\n风铃草\n（Canterbury Bell）\n感谢\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0711
+{
+	"\0\s[20]7月11日的诞生花。\n\n四季秋海棠\n（Begonia semperflorens）\n我是你的\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0712
+{
+	"\0\s[20]7月12日的诞生花。\n\n金银茄\n（Solanum texanum）\n沉不住气\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0713
+{
+	"\0\s[20]7月13日的诞生花。\n\n变叶木\n（Codiaeum variegatum var.pictum）\n现实主义者\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0714
+{
+	"\0\s[20]7月14日的诞生花。\n\n草夹竹桃\n（Phlox）\n温和\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0715
+{
+	"\0\s[20]7月15日的诞生花。\n\n沙漠玫瑰\n（Adenium obesum）\n可爱\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0716
+{
+	"\0\s[20]7月16日的诞生花。\n\n紫罗兰\n（Stock）\n永恒的美丽\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0717
+{
+	"\0\s[20]7月17日的诞生花。\n\n白玫瑰\n（White Rose）\n敬爱\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0718
+{
+	"\0\s[20]7月18日的诞生花。\n\n苔藓玫瑰\n（Moss Rose）\n可怜\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0719
+{
+	"\0\s[20]7月19日的诞生花。\n\n孔雀竹芋\n（Calathea makoyana）\n美的光辉\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0720
+{
+	"\0\s[20]7月20日的诞生花。\n\n乳茄\n（Solanum mammosum）\n真实\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0721
+{
+	"\0\s[20]7月21日的诞生花。\n\n黄玫瑰\n（Yellow Rose）\n美\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0722
+{
+	"\0\s[20]7月22日的诞生花。\n\n紫玉兰\n（Magnolia liliflora）\n思慕\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0723
+{
+	"\0\s[20]7月23日的诞生花。\n\n玫瑰\n（York & Lancaster Rose）\n温暖\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0724
+{
+	"\0\s[20]7月24日的诞生花。\n\n马蹄莲\n（Zantedeschia aethiopica）\n幽雅的心\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0725
+{
+	"\0\s[20]7月25日的诞生花。\n\n接骨木\n（Sambucus williamsii）\n热心\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0726
+{
+	"\0\s[20]7月26日的诞生花。\n\n金柑\n（Fortunella margarita）\n和平\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0727
+{
+	"\0\s[20]7月27日的诞生花。\n\n蔓性天竺葵\n（Pelargonium peltatum）\n真爱\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0728
+{
+	"\0\s[20]7月28日的诞生花。\n\n青桐\n（Firmiana simplex）\n 一直爱我\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0729
+{
+	"\0\s[20]7月29日的诞生花。\n\n仙人掌\n（Cactus）\n燃烧的心\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0730
+{
+	"\0\s[20]7月30日的诞生花。\n\n文殊兰\n（Crinum asiaticum）\n夫妇之爱\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0731
+{
+	"\0\s[20]7月31日的诞生花。\n\n观赏南瓜花\n（Cucurbita pepo var.ovifera）\n宽大\n\n[half]\q[◇返回,BirthdayFlower_7]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0801
+{
+	"\0\s[20]8月1日的诞生花。\n\n红色罂粟花\n（Poppy）\n安慰\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0802
+{
+	"\0\s[20]8月2日的诞生花。\n\n矢车菊\n（Corn Flower）\n幸福\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0803
+{
+	"\0\s[20]8月3日的诞生花。\n\n六月雪\n（Serissa japonica）\n少女的美态\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0804
+{
+	"\0\s[20]8月4日的诞生花。\n\n黑籽南瓜\n（Cucrubita ficifolia）\n财富\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0805
+{
+	"\0\s[20]8月5日的诞生花。\n\n石南花\n（Heather Ling）\n孤独\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0806
+{
+	"\0\s[20]8月6日的诞生花。\n\n萼凤梨\n（Aechmea chantinsii）\n名誉\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0807
+{
+	"\0\s[20]8月7日的诞生花。\n\n石榴花\n（Pomegranate）\n成熟美\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0808
+{
+	"\0\s[20]8月8日的诞生花。\n\n杜鹃花\n（Azalea）\n爱的喜悦\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0809
+{
+	"\0\s[20]8月9日的诞生花。\n\n木犀花\n（Cistus）\n人缘\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0810
+{
+	"\0\s[20]8月10日的诞生花。\n\n流苏树\n（Chionanthus retusus）\n母爱\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0811
+{
+	"\0\s[20]8月11日的诞生花。\n\n红色天竺葵\n（Geranium Zonal）\n幸福\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0812
+{
+	"\0\s[20]8月12日的诞生花。\n\n夹竹桃\n（Oleander）\n重情\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0813
+{
+	"\0\s[20]8月13日的诞生花。\n\n问荆\n（Equisetum arvense）\n戒备\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0814
+{
+	"\0\s[20]8月14日的诞生花。\n\n凌霄花\n（Campsis grandiflora）\n敬佩\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0815
+{
+	"\0\s[20]8月15日的诞生花。\n\n大花美人蕉\n（Canna generalis）\n光辉\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0816
+{
+	"\0\s[20]8月16日的诞生花。\n\n大花葱\n（Allium giganteum）\n奢华\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0817
+{
+	"\0\s[20]8月17日的诞生花。\n\n王百合\n（Lilium regale）\n田园幸福\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0818
+{
+	"\0\s[20]8月18日的诞生花。\n\n槭葵\n（Hibiscus coccineus）\n热恋\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0819
+{
+	"\0\s[20]8月19日的诞生花。\n\n枸杞\n（Lycium chinenes）\n诚实\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0820
+{
+	"\0\s[20]8月20日的诞生花。\n\n香雪兰\n（Freesia）\n纯洁\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0821
+{
+	"\0\s[20]8月21日的诞生花。\n\n芭蕉\n（Musa basjoo）\n感激\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0822
+{
+	"\0\s[20]8月22日的诞生花。\n\nアガパンサス\nシモツケソウ\nヒマワリ\nレンゲソウ\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0823
+{
+	"\0\s[20]8月23日的诞生花。\n\n彩叶秋海棠\n（Begonia cathayana）\n恩爱\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0824
+{
+	"\0\s[20]8月24日的诞生花。\n\n金盏花\n（Calendula）\n别离\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0825
+{
+	"\0\s[20]8月25日的诞生花。\n\n西府海棠\n（Malus micromalus）\n苦恋\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0826
+{
+	"\0\s[20]8月26日的诞生花。\n\n大鹤望兰\n（Strelitzia augusta）\n寻求光明\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0827
+{
+	"\0\s[20]8月27日的诞生花。\n\n彩虹竹芋\n（Calathea roseopicta）\n梦想\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0828
+{
+	"\0\s[20]8月28日的诞生花。\n\nエリンギウム\nキキョウ\nシモツケソウ\nゼラニウム（ピンク）\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0829
+{
+	"\0\s[20]8月29日的诞生花。\n\n花烟草\n（Nicotiana alata）\n全赖有你\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0830
+{
+	"\0\s[20]8月30日的诞生花。\n\n一枝黄花\n（Solidago canadensis）\n淡泊\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0831
+{
+	"\0\s[20]8月31日的诞生花。\n\n一品红\n（Euphorbia pulcherrima）\n誓言\n\n[half]\q[◇返回,BirthdayFlower_8]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0901
+{
+	"\0\s[20]9月1日的诞生花。\n\n鸳鸯茉莉\n（Brunfelsia acuminata）\n爱我\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0902
+{
+	"\0\s[20]9月2日的诞生花。\n\n墨西哥常春藤\n（Mexican Ivy）\n是非\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0903
+{
+	"\0\s[20]9月3日的诞生花。\n\n雏菊\n（Marguerite）\n爱在心中\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0904
+{
+	"\0\s[20]9月4日的诞生花。\n\n银边吉祥草\n（Reineckea carnea var.variegata）\n满载希望\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0905
+{
+	"\0\s[20]9月5日的诞生花。\n\n白纹草\n（Chlorophytum bichetii）\n信赖\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0906
+{
+	"\0\s[20]9月6日的诞生花。\n\n旱金莲\n（Nasturtium）\n爱国心\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0907
+{
+	"\0\s[20]9月7日的诞生花。\n\n新娘草\n（Gibasis geniculata）\n新娘的喜悦\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0908
+{
+	"\0\s[20]9月8日的诞生花。\n\n栀子花\n（Gardenia jasminoides）\n小幸福\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0909
+{
+	"\0\s[20]9月9日的诞生花。\n\n令箭荷花\n（Nopalxochia ackermannii）\n追忆\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0910
+{
+	"\0\s[20]9月10日的诞生花。\n\n白色翠菊\n（China Aster）\n诚信\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0911
+{
+	"\0\s[20]9月11日的诞生花。\n\n芦荟\n（Aloe）\n合作\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0912
+{
+	"\0\s[20]9月12日的诞生花。\n\n铁线莲\n（Clematis）\n心之美\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0913
+{
+	"\0\s[20]9月13日的诞生花。\n\n可爱花\n（Eranthemum pulchellum）\n纯朴\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0914
+{
+	"\0\s[20]9月14日的诞生花。\n\n日本绣线菊\n（Spiraea japonica）\n诱惑\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0915
+{
+	"\0\s[20]9月15日的诞生花。\n\n桧柏\n（Sabina chinensis）\n华贵\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0916
+{
+	"\0\s[20]9月16日的诞生花。\n\n龙胆草\n（Gentian）\n忧郁\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0917
+{
+	"\0\s[20]9月17日的诞生花。\n\n石南花\n（Heath）\n孤独\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0918
+{
+	"\0\s[20]9月18日的诞生花。\n\n藿香蓟\n（Ageratum conyzoides）\n严格\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0919
+{
+	"\0\s[20]9月19日的诞生花。\n\n海桐\n（Pittosporum tobira）\n自重\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0920
+{
+	"\0\s[20]9月20日的诞生花。\n\n球兰\n（Hoya carnosa）\n想起我\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0921
+{
+	"\0\s[20]9月21日的诞生花。\n\n红口水仙\n（Narcissus poeticus）\n青春无悔\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0922
+{
+	"\0\s[20]9月22日的诞生花。\n\n小檗\n（Berberis thunbergii）\n兴奋\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0923
+{
+	"\0\s[20]9月23日的诞生花。\n\n南洋杉\n（Araucaria cunninghamia）\n高尚\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0924
+{
+	"\0\s[20]9月24日的诞生花。\n\n瑞香\n（Daphne odora）\n喜悦之情\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0925
+{
+	"\0\s[20]9月25日的诞生花。\n\n白花杜鹃\n（Rhododendron mucronatum）\n爱的音符\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0926
+{
+	"\0\s[20]9月26日的诞生花。\n\n金花茶\n（Camellia chrysantha）\n自然美\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0927
+{
+	"\0\s[20]9月27日的诞生花。\n\n朝鲜丁香\n（Syringa dilatata）\n永恒\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0928
+{
+	"\0\s[20]9月28日的诞生花。\n\n雁来红\n（Love-Lies-Bleeding）\n爱戴\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0929
+{
+	"\0\s[20]9月29日的诞生花。\n\n女贞\n（Ligustrum lucidum）\n名声\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_0930
+{
+	"\0\s[20]9月30日的诞生花。\n\nシュウメイギク\nスギ\nハゲイトウ\n\n[half]\q[◇返回,BirthdayFlower_9]\n\q[◇取消,FlowerCancel]\e"
+}
+
+//---- 10 -----------------------------------------------------------
+
+Select.BirthdayFlower_1001
+{
+	"\0\s[20]10月1日的诞生花。\n\n红菊\n（Chrysanthemum）\n爱\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1002
+{
+	"\0\s[20]10月2日的诞生花。\n\n杏树\n（Apricot）\n羞怯\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1003
+{
+	"\0\s[20]10月3日的诞生花。\n\n枫叶\n（Maple）\n自制能力\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1004
+{
+	"\0\s[20]10月4日的诞生花。\n\n蛇麻草\n（Common Hop）\n天真\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1005
+{
+	"\0\s[20]10月5日的诞生花。\n\n棕榈\n（Windmill Palm）\n成功\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1006
+{
+	"\0\s[20]10月6日的诞生花。\n\n榛\n（Hazel）\n和好\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1007
+{
+	"\0\s[20]10月7日的诞生花。\n\n枞树\n（Fir）\n高尚\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1008
+{
+	"\0\s[20]10月8日的诞生花。\n\n欧芹\n（Parsley）\n胜利\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1009
+{
+	"\0\s[20]10月9日的诞生花。\n\n茴香\n（Fennel）\n赞赏\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1010
+{
+	"\0\s[20]10月10日的诞生花。\n\n甜瓜\n（Melon）\n饱食\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1011
+{
+	"\0\s[20]10月11日的诞生花。\n\n千屈草\n（Lythrum）\n爱的悲伤\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1012
+{
+	"\0\s[20]10月12日的诞生花。\n\n覆盆子\n（Bilberry）\n叛逆\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1013
+{
+	"\0\s[20]10月13日的诞生花。\n\n绣线菊\n（Spirea）\n有条理的爱\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1014
+{
+	"\0\s[20]10月14日的诞生花。\n\n黄菊\n（Chrysanthemum）\n真实\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1015
+{
+	"\0\s[20]10月15日的诞生花。\n\n罗勒\n（Sweet Basil）\n好声望\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1016
+{
+	"\0\s[20]10月16日的诞生花。\n\n苔藓玫瑰\n（Moss Rose）\n天真无邪\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1017
+{
+	"\0\s[20]10月17日的诞生花。\n\n葡萄\n（Grape）\n信赖\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1018
+{
+	"\0\s[20]10月18日的诞生花。\n\n蔓越橘\n（Craberry）\n抚慰\nワタ\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1019
+{
+	"\0\s[20]10月19日的诞生花。\n\n红色凤仙花\n（Balsam）\n别碰我\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1020
+{
+	"\0\s[20]10月20日的诞生花。\n\n麻\n（Indian Hemp）\n命运\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1021
+{
+	"\0\s[20]10月21日的诞生花。\n\n蓟花\n（Thistle）\n独立\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1022
+{
+	"\0\s[20]10月22日的诞生花。\n\n面高花\n（arrow Head）\n相信\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1023
+{
+	"\0\s[20]10月23日的诞生花。\n\n曼陀罗花\n（Thorn Apple）\n敬爱\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1024
+{
+	"\0\s[20]10月24日的诞生花。\n\n蜡梅\n（Plum Blossom）\n高尚的心灵\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1025
+{
+	"\0\s[20]10月25日的诞生花。\n\n元宝枫\n（Aceracede）\n拘谨\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1026
+{
+	"\0\s[20]10月26日的诞生花。\n\n酸模\n（Sorrel）\n慈爱\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1027
+{
+	"\0\s[20]10月27日的诞生花。\n\n野玫瑰\n（Briar Rose）\n诗\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1028
+{
+	"\0\s[20]10月28日的诞生花。\n\n木槿\n（Rose Sharon）\n纤细之美\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1029
+{
+	"\0\s[20]10月29日的诞生花。\n\n西洋苹果\n（Crab Apple）\n指引\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1030
+{
+	"\0\s[20]10月30日的诞生花。\n\n山梗菜\n（Cardinal Flower）\n恶意\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1031
+{
+	"\0\s[20]10月31日的诞生花。\n\n水芋\n（Calla Lily）\n热血\n\n[half]\q[◇返回,BirthdayFlower_10]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1101
+{
+	"\0\s[20]11月1日的诞生花。\n\n欧楂\n（Medlar）\n独一无二的爱\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1102
+{
+	"\0\s[20]11月2日的诞生花。\n\n羽扇豆\n（Lupinus）\n关爱\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1103
+{
+	"\0\s[20]11月3日的诞生花。\n\n葫芦泻根\n（Bryony）\n拒绝\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1104
+{
+	"\0\s[20]11月4日的诞生花。\n\n鹿舌草\n（Hart's Tongue Fern）\n真诚的安慰\n\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1105
+{
+	"\0\s[20]11月5日的诞生花。\n\n松叶菊\n（Fig Mrigold）\n功勋\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1106
+{
+	"\0\s[20]11月6日的诞生花。\n\n兰草\n（Chinese Hemp Agrimony）\n踌躇\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1107
+{
+	"\0\s[20]11月7日的诞生花。\n\n万寿菊\n（Marigold）\n别离的伤感\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1108
+{
+	"\0\s[20]11月8日的诞生花。\n\n剪秋罗\n（Lychnis Flos-Cuculi）\n机智\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1109
+{
+	"\0\s[20]11月9日的诞生花。\n\n没药树之花\n（Myrrh）\n真实\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1110
+{
+	"\0\s[20]11月10日的诞生花。\n\n芙蓉\n（Cotton Rose）\n纤细之美\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1111
+{
+	"\0\s[20]11月11日的诞生花。\n\n山茶花\n（Camellia）\n含蓄\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1112
+{
+	"\0\s[20]11月12日的诞生花。\n\n柠檬\n（Lemon）\n思慕\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1113
+{
+	"\0\s[20]11月13日的诞生花。\n\n柠檬美女樱\n（Lemon Verbena）\n忍耐\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1114
+{
+	"\0\s[20]11月14日的诞生花。\n\n松\n（Pine）\n长生不老\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1115
+{
+	"\0\s[20]11月15日的诞生花。\n\n小寇花\n（Crown Vetch）\n谦逊\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1116
+{
+	"\0\s[20]11月16日的诞生花。\n\n圣诞蔷薇\n（Christmas Rose）\n追忆\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1117
+{
+	"\0\s[20]11月17日的诞生花。\n\n款冬\n（Sweet-Scented-Tussilango）\n公平\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1118
+{
+	"\0\s[20]11月18日的诞生花。\n\n虎皮百合\n（Hill Lily）\n庄严\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1119
+{
+	"\0\s[20]11月19日的诞生花。\n\n弟切草\n（Aaron's Beard）\n秘密\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1120
+{
+	"\0\s[20]11月20日的诞生花。\n\n年舌草\n（Bugloss）\n真实\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1121
+{
+	"\0\s[20]11月21日的诞生花。\n\n吊钟表花\n（Bell Flower）\n诚恳\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1122
+{
+	"\0\s[20]11月22日的诞生花。\n\n蛇不爬\n（Berberis）\n难以取悦\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1123
+{
+	"\0\s[20]11月23日的诞生花。\n\n蕨\n（Fern）\n诚实\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1124
+{
+	"\0\s[20]11月24日的诞生花。\n\n荚莲\n（Viburnum）\n至死不渝的爱\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1125
+{
+	"\0\s[20]11月25日的诞生花。\n\n漆树\n（Rhus Cotinus）\n贤明\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1126
+{
+	"\0\s[20]11月26日的诞生花。\n\n西洋蓍草\n（Yarrow）\n指导\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1127
+{
+	"\0\s[20]11月27日的诞生花。\n\n白胶木\n（Phus）\n聪明\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1128
+{
+	"\0\s[20]11月28日的诞生花。\n\n翠菊\n（China Aster）\n追想\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1129
+{
+	"\0\s[20]11月29日的诞生花。\n\n巴卡丽丝\n（Baccaharis）\n开拓\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1130
+{
+	"\0\s[20]11月30日的诞生花。\n\n落叶\n（Dry Grasses）\n等待新春\n\n[half]\q[◇返回,BirthdayFlower_11]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1201
+{
+	"\0\s[20]12月1日的诞生花。\n\n艾菊\n（Tansy）\n和平\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1202
+{
+	"\0\s[20]12月2日的诞生花。\n\n苔藓\n（Moss）\n母爱\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1203
+{
+	"\0\s[20]12月3日的诞生花。\n\n薰衣草\n（Lavender）\n期待\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1204
+{
+	"\0\s[20]12月4日的诞生花。\n\n酸叶\n（Rumex）\n情爱\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1205
+{
+	"\0\s[20]12月5日的诞生花。\n\n安布罗希亚\n（Ambrosia）\n幸福\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1206
+{
+	"\0\s[20]12月6日的诞生花。\n\n虎耳草\n（saxifrage）\n切实的爱情\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1207
+{
+	"\0\s[20]12月7日的诞生花。\n\n蕨\n（Fern）\n信赖\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1208
+{
+	"\0\s[20]12月8日的诞生花。\n\n芦苇\n（Reed）\n深情\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1209
+{
+	"\0\s[20]12月9日的诞生花。\n\n菊\n（Chrysanthemum）\n高洁\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1210
+{
+	"\0\s[20]12月10日的诞生花。\n\n红色山茶花\n（Camellia）\n理性\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1211
+{
+	"\0\s[20]12月11日的诞生花。\n\n松叶菊\n（Fig Marigold）\n爱国心\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1212
+{
+	"\0\s[20]12月12日的诞生花。\n\n棉\n（Cotton Plant）\n优秀\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1213
+{
+	"\0\s[20]12月13日的诞生花。\n\n紫红色菊花\n（Chrysanthemum）\n爱情\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1214
+{
+	"\0\s[20]12月14日的诞生花。\n\n松\n（Pine）\n勇敢\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1215
+{
+	"\0\s[20]12月15日的诞生花。\n\n紫丁香\n（winter Daphne）\n不灭之火\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1216
+{
+	"\0\s[20]12月16日的诞生花。\n\n赤杨\n（Alder）\n庄严\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1217
+{
+	"\0\s[20]12月17日的诞生花。\n\n樱兰\n（Honey Plant）\n同感\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1218
+{
+	"\0\s[20]12月18日的诞生花。\n\n鼠尾草\n（Sage）\n家庭观念\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1219
+{
+	"\0\s[20]12月19日的诞生花。\n\n雪片莲\n（Snowflake）\n美丽\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1220
+{
+	"\0\s[20]12月20日的诞生花。\n\n凤梨ー\n（Pineapple）\n完美\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1221
+{
+	"\0\s[20]12月21日的诞生花。\n\n薄荷\n（Mint）\n美德\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1222
+{
+	"\0\s[20]12月22日的诞生花。\n\n百日草\n（Zinnia）\n美满\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1223
+{
+	"\0\s[20]12月23日的诞生花。\n\n筱悬木\n（Phtanus）\n天才\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1224
+{
+	"\0\s[20]12月24日的诞生花。\n\n桷寄生\n（Mistletoe）\n耐性\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1225
+{
+	"\0\s[20]12月25日的诞生花。\n\n冬青\n（Holly）\n先见之明\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1226
+{
+	"\0\s[20]12月26日的诞生花。\n\n光叶蔷薇\n（R.wichuraiana）\n追忆\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1227
+{
+	"\0\s[20]12月27日的诞生花。\n\n梅\n（Plum Blossom）\n澄澈的心\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1228
+{
+	"\0\s[20]12月28日的诞生花。\n\n石榴花\n（Pomegranate）\n成熟的美丽\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1229
+{
+	"\0\s[20]12月29日的诞生花。\n\n灯笼草\n（Winter Cherry）\n自然\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1230
+{
+	"\0\s[20]12月30日的诞生花。\n\n蜡梅\n（Carolina Allspice）\n慈爱\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+Select.BirthdayFlower_1231
+{
+	"\0\s[20]12月31日的诞生花。\n\n桧木\n（Japanese Cypress）\n不灭\n\n[half]\q[◇返回,BirthdayFlower_12]\n\q[◇取消,FlowerCancel]\e"
+}
+

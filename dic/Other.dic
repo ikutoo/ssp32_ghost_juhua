@@ -1,0 +1,384 @@
+﻿/////////
+///////// Other
+///////// 五十音,记事本,大头贴,占卜
+///////// by ndmh.
+
+
+//---- 五十音[2010-3-22_by ndmh] -------------------------------------------------------------------------------------
+//あ い う え お
+//か き く け こ
+//さ し す せ そ
+//た ち つ て と
+//な に ぬ ね の
+//は ひ ふ へ ほ
+//ま み む め も
+//や 　 ゆ 　 よ
+//ら り る れ ろ
+//わ 　 を 　 ん
+Select.test
+{
+  "\![sound,play,japvoice\あ.mp3]"
+}
+Onjap_v
+{
+  _kana=("あ,い,う,え,お,か,き,く,け,こ,さ,し,す,せ,そ,た,ち,つ,て,と,な,に,ぬ,ね,の,は,ひ,ふ,へ,ほ,ま,み,む,め,も,や,　,ゆ,　,よ,ら,り,る,れ,ろ,わ");
+  _w="\b[2]\![quicksession,true]\![set,choicetimeout,0]\c\0\s[26]%username要学习日语五十音吗，点击下面的假名就可以了哦~\n[150]";
+  _b="";_v="";_j=1;
+  if reference1!=null
+    _j=reference1+1;
+  _mt="\f[color,110,110,110] ◢ 只播放点击(当前状态)\_l[155,-]\f[color,100,10,220]\q[◥ 顺序播放,Onjap_X,%(_j)]\_l[240,-]\f[color,250,0,0]\q[■ 停止,Onjap_s]\f[default] \n[150] "
+  _b=reference0;
+  if _argv[0]!=null {
+    _b=_kana[_argv[0]-1];
+    _v="\![sound,wait]";
+    _mt=" \f[color,100,10,220]\q[◢ 只播放点击,Onjap_s]\_l[100,-]\f[color,110,110,110]◥ 顺序播放(当前状态)\_l[240,-]\f[color,250,0,0]\q[■ 停止,Onjap_s]\f[default] \n[150] "
+  }
+  _w+="%(_mt)\f[bold,true]当前播放：\f[color,250,0,0]%(_b)\f[default]\n[150] "
+  for _i=0;_i<46;_i++ {
+    _n="";
+    if (_i+1)%5==0
+      _n="\n[170] ";
+    if _b==_kana[_i] {
+      _l=(_i+1)*210
+      if _i==37
+        _l=(_i)*210
+      elseif _i>=39
+        _l=(_i-1)*210
+      _v="\![sound,play,japvoice\%(_b).mp3]%(_v)"
+      _w+="\_b[pic\jap.png,95,60,--clipping=%(_l-210) 0 %(_l) 319]\__q[Onjap_s,%(_kana[_i]),%(_i)]\f[bold,true]\f[color,250,0,0]\f[underline,1]%(_kana[_i])\f[default]\__q %(_n)"
+    }
+    else {
+      if _kana[_i]=="　"
+        _w+="　 "
+      else
+      _w+="\q[%(_kana[_i]),Onjap_s,%(_kana[_i]),%(_i)] %(_n)"
+    }
+  }
+  _w+="\f[color,110,110,110]　 を 　 ん\f[default]\n[270]\![*]\q[返回,ReturnMenu]\n\![*]\q[退出,OnCanceljap_v]\![quicksession,false]%(_v)"
+  _w;
+}
+
+Onjap_X
+{
+  _w="\![sound,stop]";
+  _i=reference0;
+  if _argv[0]!=null
+    _i=_argv[0];
+  while _i<47 {
+    _w+=Onjap_v(_i);
+    _i++;
+  }
+  _w;
+}
+
+Onjap_s
+{
+  "\![sound,stop]"+Onjap_v;
+}
+
+OnCanceljap_v
+{
+  ERASEVAR("japkanamode");
+  "\![sound,stop]\0\s[1]这样吗,嗯嗯...\e"
+  "\![sound,stop]\0\s[1]不学了吗,好的哦...\e"
+}
+
+//---- 记事本[2010-3-31_by ndmh] -----------------------------------------------------------------------------------------
+//使用密码表
+Onnotebook
+{
+  _w="\0\s[26]\_q\b[2]嗯嗯,这是橘花的记事本哦~\n[150]\![*]\q[添加记事,Onaddnotebook]\_l[130,-]\![*]\q[返回,ReturnMenu]\_l[180,-]\![*]\q[退出,Onovernotebook]\n[200]";
+  _j=SQL("SELECT Q FROM currency WHERE Q LIKE'%#|#%'","-f");
+  if _j==0
+    _w+="\s[3]没有数据呢...\n[110]";
+  else {
+    for _i=0;_i<_j;_i++ {
+      _t=EVAL("valueex" + _i);
+      _t1=_t[0,'#|#'];
+      if STRLEN(_t1)>8 {
+        _t1=SUBSTR(_t1,0,8);
+        _t1+=".."
+      }
+      _s="\__q[Onmenushownote,%(_t)][菜单显示]\__q";
+      if _t[1,'#|#']==1
+        _s="\f[color,110,110,110]\__q[Onmenushownote,%(_t)][取消显示]\__q\f[default]";
+      _t2=SQL("SELECT A FROM currency WHERE Q='%(_t)'","-j");
+      _w+="\f[color,255,0,0]%(_i+1).\f[default]\q[%(_t1),Onclicknotebook,%(_t)]/
+      \f[color,110,110,110]\_l[120,-][%(_t2[1,'#|#'])] /
+      \f[color,255,0,0]\__q[Ondelnotebook,%(_t)][删除]\__q\f[default] %(_s)\n[110]";
+    }
+  }
+  _w;
+}
+
+Onmenushownote
+{
+  _j=SQL("SELECT Q FROM currency WHERE Q='%(reference0)'","-j");
+  if _j[1,'#|#']==1 {
+    _t=_j[0,'#|#']+"#|#0";
+    _temp=SQL("UPDATE currency SET Q='%(_t)' WHERE Q='%(reference0)'");
+  }
+  else {
+    _a=SQL("SELECT Q FROM currency WHERE Q LIKE'%#|#1%'","-j");
+    if _a!=null {
+      _t=_a[0,'#|#']+"#|#0";
+      _temp=SQL("UPDATE currency SET Q='%(_t)' WHERE Q='%(_a)'");
+    }
+    _t=_j[0,'#|#']+"#|#1";
+    _temp=SQL("UPDATE currency SET Q='%(_t)' WHERE Q='%(reference0)'");
+  }
+  Onnotebook;
+}
+
+menushownotebook
+{
+  _w="";
+  _t=SQL("SELECT Q FROM currency WHERE Q LIKE'%#|#1%'","-j");
+  _c=SQL("SELECT A FROM currency WHERE Q LIKE'%#|#1%'","-j");
+  if _t!=null {
+      _t1=_t[0,'#|#'];
+      if STRLEN(_t1)>8 {
+        _t1=SUBSTR(_t1,0,8);
+        _t1+="..."
+      }
+    _w="\_l[110,110]\f[bold,true]\q[%(_t1),Onclicknotebook,%(_t)]\f[default]\f[color,110,110,110]\__q[Onmenushownote,%(_t)][取消显示]\__q\f[default]"
+    _c1=_c[0,'#|#'];
+    _n=STRLEN(_c1)/13+1;
+    _l=125;
+    for _i=0;_i<_n && _i<13;_i++ {
+      if _i==12
+        _w+="\_l[110,%(_l)]"+SUBSTR(_c1,_i*13,11)+"......";
+      else
+        _w+="\_l[110,%(_l)]"+SUBSTR(_c1,_i*13,13);
+      _l+=15;
+    }
+  }
+  _w;
+}
+
+Ondelnotebook
+{
+  _t=SQL("DELETE FROM currency WHERE Q='%(reference0)'");
+  Onnotebook;
+}
+
+Onclicknotebook
+{
+  _t=SQL("SELECT Q FROM currency WHERE Q='%(reference0)'","-j")
+  _c=SQL("SELECT A FROM currency WHERE Q='%(reference0)'","-j")
+  "\0\s[26]\b[2]\_q\f[bold,true]标题：%(_t[0,'#|#'])\n[110]\f[color,110,110,110][%(_c[1,'#|#'])] \f[color,255,0,0]\__q[Ondelnotebook,%(reference0)][删除]\__q\f[default] \__q[Onmenushownote,%(reference0)][菜单显示]\__q\n[160]内容：\n%(_c[0,'#|#'])\n[200]\![*]\q[返回,Onnotebook]     \![*]\q[退出,Onovernotebook]\![set,choicetimeout,0]"
+}
+
+Onaddnotebook
+{
+  if _argv[0]=="Title" {
+    if addnotebook_T!=null
+      "\0\s[26]请输入内容!\![open,inputbox,Onaddnotebook_C,-1]\n[300]\![set,choicetimeout,0]\q[◇退出,Onovernotebook,Onaddnotebook_C]\e"
+    else
+      Onaddnotebook;
+  }
+  elseif _argv[0]=="Content" {
+    if addnotebook_C!=null {
+      _T=addnotebook_T;_C=addnotebook_C;
+      _T+="#|#0";
+      _C+="#|#%(year)-%(month)-%(day)"
+      _temp=SQL("INSERT INTO currency VALUES ('%(_T)','%(_C)')");
+      ERASEVAR("addnotebook_T");
+      ERASEVAR("addnotebook_C");
+      "\0\s[26]橘花已经记下了哦~\w9\x%(Onnotebook)"
+    }
+    else
+      Onaddnotebook("Title");
+  }
+  else {
+    "\0\s[26]请输入标题!\![open,inputbox,Onaddnotebook_T,-1]\n[300]\![set,choicetimeout,0]\q[◇退出,Onovernotebook,Onaddnotebook_T]\e"
+  }
+}
+
+Onaddnotebook_T {
+  addnotebook_T = CUTSPACE(reference0);
+  Onaddnotebook("Title");
+}
+Onaddnotebook_C {
+  addnotebook_C = CUTSPACE(reference0);
+  Onaddnotebook("Content");
+}
+  
+Onovernotebook
+{
+  "\0\s[1]嗯嗯,\![close,inputbox,%(reference0)] 好的哦..."
+}
+//---- 好感(橘花1移植&修改) -------------------------------------------------------------------------------------
+Select.lovech
+{
+  if intimacy>=200
+//
+    "\0\s[2]那个\w3....\w9\w9\n陪伴主人的时光很快乐.....\w9\w9\n看着%username游戏、\w5学习、\w5还有看动漫..\w9\w9\n我都觉得好幸福、好幸福..\w9\w9\n好想好想就这样一直一直下去..\w9\n一直地一直的都陪伴着主人...\1\s[10]....令人害羞的话\w5..\w3禁止!\0\s[2]\w9\w9\n......\w9\n[180]好感度: %(intimacy)?"
+  elseif intimacy>=168
+    "\0\s[29]喜欢你....\w9.....\w9\w9\w9\w9\w9\n\n\s[21]唔...\w9...\w9....\1\s[11]你在做.......\w9\w9\w9\w9\n奇怪的幻想吗?\w9\n[180]好感度: %(intimacy)?"
+  elseif intimacy>=133
+    "\0\s[2]阿......\w8\w9\w9\n\0\s[29]我....\w8\w3喜.......\w8\w9\w8\w9\w9\w9\n\n\s[33]我\w4很喜欢\w4%username\1\s[11]这.....\w9\w9\w8\n\s[10]还是第一次看到你这样.....\w9\n[180]好感度: %(intimacy)?"
+  elseif intimacy>=100
+    "\0\s[26]唔......\w8\n\0\s[29]该怎么说好呢......\w9\n[180]好感度: %(intimacy)?\e"
+  elseif intimacy>=70
+    "\0\s[1]嗯.....\w\n\0\s[5]应该说喜欢 还是很喜欢呢?\w8\1\s[10]反正就是很喜欢吧......\w9\n[180]好感度: %(intimacy)?\e"
+  elseif intimacy>=50
+    "\0\s[2]阿...?\w8\n\0\s[30]斗和...\w8\n你觉得呢?\w8\1\s[12]你跟%username很不错吧?\w8个人感觉....\w9\n[180]好感度: %(intimacy)?\e"
+  elseif intimacy>=30
+    "\0\s[20]嗯......\w8\n\0\s[41]好像还不错吧!\w9\n[180]好感度: %(intimacy)?\e"
+  elseif intimacy>=10
+    "\0\s[20]唔.......\w8\n\0\s[5]应该是普通吧......\w9\n[180]好感度: %(intimacy)?\e"
+  elseif intimacy>=0
+    "\0\s[0]普普通通吧.....\w9\n[180]好感度: %(intimacy)?\e"
+  else
+    "\0\s[2]咦?\w8\n\0\s[8]刚才有人在说话吗?\w8\1\s[13]不知道.....\w9\n[180]好感度: %(intimacy)?\e"
+}
+
+//--------- 大头贴5连拍(橘花1移植) ----------------------------------------------------------------------------------
+Select.SUN
+{
+	"\0\s[5]%(username)想看我大头贴5连拍啊？可以啊！！\w8/
+	\1\s[10]我来当摄影师吧～喵！！\n\n/
+	\q[◇请按下拍照键,STOPSUN]\n\e"
+}
+
+Select.STOPSUN{
+  SUN_A1;SUN_A2;SUN_A3;SUN_A4;SUN_A5;
+}
+
+SUN_A1
+{
+	"\0\s[5]准备好了吗……？？\w8\w8\s[40]那我要开始咯！！/
+	\w8\w8\1\快开始吧，%(username)等好久了……/
+	\w8\w8\w8\w8\w8\0\n\s[0] (1...)/
+	\w8\w8\w8\w8\w8\0\n\s[2] (2...)/
+	\w8\w8\w8\w8\w8\0\n\s[1] (3...)/
+	\w8\w8\w8\w8\w8\0\n\s[5] (4...)/
+	\w8\w8\w8\w8\w8\0\n\s[25] (5...)/
+	\w8\w8\1\OK拍完了……！！/
+	\w8\w8\0\n\s[33]好害羞喔…%(username)喜欢拍拍的橘花吗？\e"
+}
+
+SUN_A2
+{
+	"\0\s[5]准备好了吗……？？\w8\w8\s[40]那我要开始咯！！/
+	\w8\w8\1\快开始吧，%(username)等好久了……/
+	\w8\w8\w8\w8\w8\0\n\s[5] (1...)/
+	\w8\w8\w8\w8\w8\0\n\s[9] (2...)/
+	\w8\w8\w8\w8\w8\0\n\s[5] (3...)/
+	\w8\w8\w8\w8\w8\0\n\s[20] (4...)/
+	\w8\w8\w8\w8\w8\0\n\s[23] (5...)/
+	\w8\w8\1\OK拍完了……！！/
+	\w8\w8\0\n\s[33]好害羞喔…%(username)喜欢拍拍的橘花吗？\e"
+}
+
+SUN_A3
+{
+	"\0\s[5]准备好了吗……？？\w8\w8\s[40]那我要开始咯！！/
+	\w8\w8\1\快开始吧，%(username)等好久了……/
+	\w8\w8\w8\w8\w8\0\n\s[21] (1...)/
+	\w8\w8\w8\w8\w8\w8\0\n\s[117] (2变身)\w8\w8\1\s[11]……你觉得很好玩是吗？/
+	\w8\w8\0\n\s[8]对不起啦……我继续喔！/
+	\w8\w8\w8\w8\w8\0\n\s[22] (3...)/
+	\w8\w8\w8\w8\w8\0\n\s[5] (4...)/
+	\w8\w8\w8\w8\w8\0\n\s[27] (5...)/
+	\w8\w8\1\OK拍完了……！！/
+	\w8\w8\0\n\s[33]好害羞喔…%(username)喜欢拍拍的橘花吗？\e"
+}
+
+SUN_A4
+{
+	"\0\s[5]准备好了吗……？？\w8\w8\s[40]那我要开始咯！！/
+	\w8\w8\1\快开始吧，%(username)等好久了……/
+	\w8\w8\w8\w8\w8\0\n\s[100] (1...)/
+	\w8\w8\w8\w8\w8\0\n\s[34] (2...)/
+	\w8\w8\w8\w8\w8\0\n\s[40] (3...)/
+	\w8\w8\w8\w8\w8\0\n\s[33] (4...)/
+	\w8\w8\w8\w8\w8\0\n\s[28] (5...)/
+	\w8\w8\1\OK拍完了……！！/
+	\w8\w8\0\n\s[33]好害羞喔…%(username)喜欢拍拍的橘花吗？\e"
+}
+
+SUN_A5
+{
+	"\0\s[5]准备好了吗……？？\w8\w8\s[40]那我要开始咯！！/
+	\w8\w8\1\快开始吧，%(username)等好久了……/
+	\w8\w8\w8\w8\w8\0\n\s[250] (1...)/
+	\w8\w8\w8\w8\w8\w8\0\n\s[111] (2变身)\w8\w8\1\s[11]……你觉得很好玩是吗？/
+	\w8\w8\0\n\s[8]对不起啦……我继续喔！/
+	\w8\w8\w8\w8\w8\0\n\s[35] (3...)/
+	\w8\w8\w8\w8\w8\0\n\s[27] (4...)/
+	\w8\w8\w8\w8\w8\0\n\s[51] (5...)/
+	\w8\w8\1\OK拍完了……！！/
+	\w8\w8\0\n\s[33]好害羞喔…%(username)喜欢拍拍的橘花吗？\e"
+}
+//---- 占卜(橘花1移植) ----------------------------------------------------------------------------------------
+Select.FUT
+{
+  "\0\s[550]与其说占卜，我比较喜欢预言!!\w8/
+  \1\s[10]按下去就对了....\n\n/
+  \q[按吧,STOPFUT]\n\e"
+}
+Select.STOPFUT {
+  FUT_F1;FUT_F2;FUT_F3;FUT_F4;FUT_F5;FUT_F6;FUT_F7;FUT_F8;FUT_F9;FUT_F10;
+}
+
+
+FUT_F1
+{
+"\0\s[6]你的运势是...............\w8\w8\w8\s[551]天谴!!!!!/
+\w8\w8\1\天有不测風雲，人有旦夕禍福!\w8\w8\0\n\s[5]激怒了所谓的神吗?\e"
+}
+FUT_F2
+{
+"\0\s[6]你的运势是...............\w8\w8\w8\s[552]警觉!!!!!/
+\w8\w8\1\这什么意思.......\w8\w8\0\n\s[8]出门时，要小心阻击手喔!\e"
+}
+FUT_F3
+{
+"\0\s[6]你的运势是...............\w8\w8\w8\s[553]大凶!!!!!/
+\w8\w8\1\会死吗?还是不要出门好了\w8\w8\0\n\s[8]战争难免有死伤.......\e"
+}
+FUT_F4
+{
+"\0\s[6]你的运势是...............\w8\w8\w8\s[554]胜利!!!!!/
+\w8\w8\1\做什么???\w8\w8\0\n\s[5]应该能成功歼灭敌人喔!!!\e"
+}
+FUT_F5
+{
+"\0\s[6]你的运势是...............\w8\w8\w8\s[555]绝望!!!!!/
+\w8\w8\1\s[12]...............这是什么啊?\w8\w8\0\n\s[0]大概是說%(username)沒希望了吧......\e"
+}
+FUT_F6
+{
+"\0\s[6]你的运势是...............\w8\w8\w8\s[555]爱恋!!!!!/
+\w8\w8\1\有点暧昧的感觉.......?\w8\w8\0\n\s[9]%(username)等等...有空吗....嗯..???\w8\w8\1\妳怪怪的喔..???\w8\w8\0\n\s[21]啊..被你发现了....\e"
+}
+FUT_F7
+{
+"\0\s[6]你的运势是...............\w8\w8\w8\s[555]懒惰!!!!!/
+\w8\w8\1\s[12]懶惰..........这是什么啊?\w8\w8\0\n\s[8]大概是說%(username)今天一整天都懶懶的吧......\e"
+}
+FUT_F8
+{
+"\0\s[6]你的运势是...............\w8\w8\w8\s[553]吃醋!!!!!/
+\w8\w8\1\妳确定是算%(username)..还是说妳阿..??\w8\w8\0\n\s[101]啊..讨厌......我哪哪...有吃醋啊.....\e"
+}
+FUT_F9
+{
+"\0\s[6]你的运势是...............\w8\w8\w8\s[554]侵略藍星!!!!!/
+\w8\w8\1\咦?..........karoro军曹要來地球吗...\w8\w8\0\n\s[22]不可能吧....有的话我也会保护%(username)..\e"
+}
+FUT_F10
+{
+"\0\s[6]你的运势是...............\w8\w8\w8\s[554]充電!!!!!/
+\w8\w8\1\.............什么東西要充电?\w8\w8\0\n\s[40]应该是说%(username)平常太累了应该好好休息来充电..\e"
+}
+
+
+//------------------------------------------------------------------------------------------------------------
+
+
+
+
+

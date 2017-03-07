@@ -1,0 +1,598 @@
+///////// 文　ゴーストテンプレート
+///////// ランダムトーク辞书
+///////// written by umeici.
+
+
+AiTalk
+{
+	if ISVAR("talkmemo") == 1
+	{
+		ERASEVAR("talkmemo")
+	}
+	if mikireflag == 0
+	{
+		if CHAIN.IDName == "" 
+		{
+			if smoking == "1"
+			{
+				SmokingEnd
+			}
+			elseif rest == "1"
+			{
+				RestEnd
+			}
+			else
+			{
+				RandomTalk
+			}
+		}
+		else
+		{
+			ChainTalk
+		}
+	}
+	elseif mikireswitch == "1"
+	{
+		MikireTalk
+	}
+}
+
+RandomTalk : nonoverlap
+//**** ランダムトーク *************************************************************************************************
+{
+//-------TalkScience----------------------------------------------------------------------------------------------------------------
+  {
+     //Science_TalkAnime;
+     Science_TalkGame;
+     Science_TalkComputerScience;
+     Science_TalkCharacter;
+     Science_TalkComic;
+     Science_TalkMilitary;
+     Science_TalkNature;
+     Science_TalkReligion;
+     Science_TalkSociety;
+     Science_TalkMathmetic;
+  }
+//-------TalkIdea----------------------------------------------------------------------------------------------------------------
+  {
+     //Idea_TalkAnime;
+     //Idea_TalkGame;
+     //Idea_TalkComputerScience;
+  }
+}
+
+//---- チェイントーク -------------------------------------------------------------------------------------------------
+
+Chain1
+{{CHAIN
+	{
+		"\0\s[0]Nine little nigger boys sat up very late.\w9\w9\w9\n\n[half]One overslept himself,\w9\w9\n and then there were eight.\e"
+		"\1\s[10]然后所有人都消失了。\w9\w9\0\s[8]太省略了…\e:chain=end"
+		"\0\s[0]Nine little nigger boys\w9…\w9\w9\s[5]\n太麻烦了、\w9统统一起杀掉吧。\w9\w9\1\s[10]你就是欧文吗…\e:chain=end"
+	}
+	"\0\s[0]Eight little nigger boys traveling in Devon.\w9\w9\w9\n\n[half]One said he had stay there,\w9\w9\n and then there were seven.\e"
+	"\0\s[0]Seven little nigger boys chopping up sticks.\w9\w9\w9\n\n[half]One chopped himself in half,\w9\w9\n and then there were six.\e"
+	"\0\s[0]Six little nigger boys playing with a hive.\w9\w9\w9\n\n[half]A bumble-bee stung one,\w9\w9\n and then there were five.\e"
+	"\0\s[0]Five little nigger boys going in for law.\w9\w9\w9\n\n[half]One got in chancery,\w9\w9\n and then there were four.\e"
+	"\0\s[0]Four little nigger boys going out to sea.\w9\w9\w9\n\n[half]A red herring swallowed one,\w9\w9\n and then there were three.\e"
+	"\0\s[0]Three little nigger boys walking in the zoo.\w9\w9\w9\n\n[half]A big bear hugged one,\w9\w9\n and then there were two.\e"
+	"\0\s[0]Two little nigger boys sitting in the sun.\w9\w9\w9\n\n[half]One got frizzled up,\w9\w9\n and then there was one.\e"
+	"\0\s[0]One little nigger boys living all alone.\w9\w9\w9\n\n[half]He got married,\w9\w9\n and then there were none.\w9\w9\1\s[10]别再说Nigger(黑鬼)了。\w9\w9\0\s[30]\n\n[half]这是有名的童话喔。\w9\w9\n美国的。\e:chain=end"
+}}CHAIN
+Chain2
+{{CHAIN
+	talkmemo = "c_0"
+	{
+		"\0\s[30]漆成白色、\w9\w5变成白猫吧。\w9\1\s[10]开什么玩笑。\w9\w9\w9\0\s[32]\n\n[half]那、\w9红猫。\w9\w9\w5\1\s[10]\n\n[half]…\w9用血吗…\e"
+		{
+			"\0\s[30]漆成白色、\w9\w5变成白猫吧。\w9\1\s[10]非常可惜、白猫到处都有。\w9\w9\0\s[20]\n\n[half]那…\w9\w9\s[0]"
+			--
+			"绿"
+			"蓝"
+			"紫"
+			--
+			"猫。\w9\w9\1\s[10]\n\n[half]"
+			--
+			"那还算猫吗？\e:chain=end"
+			"感觉真恶心。\e:chain=end"
+		}
+	}
+	"\1\s[10]不是有染发什么的吗。\w9\n为什么要用漆的啊。\w9\w9\w5\0\s[30]那么、\w9要染成什么颜色呢？\w9\w9\1\s[13]\n\n[half]你才是、\w9\w5染白发时可以用啊。\w9\w9\0\s[32]\n\n[half]果然、红猫比较好吗？\w9\1\s[10]\n\n[half]我拒绝。\e:chain=end"
+}}CHAIN
+Chain3
+{{CHAIN
+	talkmemo = "c_1"
+	"\0\s[20]说起来…\w9\w9\n伪春菜的圈子里、酒量差的人很多呢。\w9\s[0]\n像是喝醉了就变了个人。\w9\w9\1\s[10]你呢？\w9\w9\0\s[30]\n\n[half]普通而已。\w9\w9\1\s[10]\n\n[half]真无趣。\w9\nGhost失格。\w9\w9\w5\0\s[8]\n\n[half]咦？\e:chain=end"
+}}CHAIN
+Chain4
+{{CHAIN
+	"\0\s[0]说到脑…\w9\w9\n有种剖开头盖骨、\w9\n用针一根根刺下去的拷问法…\w9\w9\1\s[10]…\w9…\w9…\w9\w9\0\s[6]\n\n[half]虽然不会有痛楚、\w9\s[21]\n思考能力却会渐渐降低…\1\s[10]\n\n[half]别说了。\e:chain=end"
+}}CHAIN
+Chain5
+{{CHAIN
+	talkmemo = "r_3"
+	"\1\s[10]想戒菸吗？\w9\w5\0\s[7]我没有吸菸。\w9\w9\1\s[10]\n\n[half]味道很好喔？\w9\w9\0\s[6]\n\n[half]请不要再推荐了。\e:chain=end"
+}}CHAIN
+Chain6
+{{CHAIN
+	"\1\s[11]酢ニダ。\w9\c\0\s[30]？\w9\w5\1\s[13]别在意。\e:chain=end" // 一发捏他
+	"\e:chain=end"
+	"\e:chain=end"
+}}CHAIN
+Chain7
+{{CHAIN
+	"\0\s[0]喝了廉价的提神剂、\w9之所以会感觉到有精神、\w9\n主要是、\w4因为咖啡因的作用。\w9\1\s[10]或者是因为安慰效果。\w9\w9\n那些碳酸饮料没道理可以回复体力不是吗。\e:chain=end"
+}}CHAIN
+Chain8
+{{CHAIN
+	{
+		"\0\s[0]说到穿耳洞、\w9\s[6]\n『露出一条白色的线、\w9\n　拉断了就会失明』\w9\n这种话、\w9\n到底是谁说出来的呢。\w9\w9\1\s[10]"
+		--
+		"白色的线、\w9\n是指视神经吧？\w9\0\s[0]\n\n[half]天知道？\e:chain=end"
+		"我可是看的见喔。\w9\w9\0\s[30]\n\n[half]看的见吗？\w9\w9\1\s[13]\n\n[half]…\w9真抱歉啊、\w9我就是眯眯眼。\e:chain=end"
+	}
+}}CHAIN
+Chain9
+{{CHAIN
+	"\1\s[13]就算是人类、\w9\n也不可能永远繁荣下去的。\w9\w9\n就慢慢的等待猫的时代来临吧。\w9\w9\0\s[6]会被沉进水瓶里喔。\w9\w9\1\s[10]\n\n[half]至少、\w9在用美味的啤酒灌醉我之后再那么做吧。\e:chain=end"
+}}CHAIN
+Chain10
+{{CHAIN
+	"\1\s[10]想看见幻觉的话有不错的药喔。\w9\w9\0\s[30]那不是违法的吗？\w9\w9\1\s[13]\n\n[half]也有脱法的东西。\w9\w9\0\s[8]\n\n[half]『脱法』\w9是什么…\e:chain=end"
+}}CHAIN
+Chain11
+{{CHAIN
+	"\0\s[6]说到宗教画…\w9\w9\s[0]\n亚当和夏娃有肚脐不是很奇怪吗。\w9\w9\n要说的话就像是手术痕迹。\w9\w9\1\s[10]说是因为被创造成有肚脐的模样\w9\n也只像是在找理由。\e:chain=end"
+}}CHAIN
+Chain12
+{{CHAIN
+	"\1\s[10]对我们而言\w5瓦斯排气\w9\n更加的有害…\w9\w9\0\s[30]怎么了？\w9\w9\1\s[10]\n\n[half]特别是狗会去嗅地面的气味对吧。\w9\w9\n那经常会造成肺癌。\w9\w9\0\s[6]\n\n[half]嗯…\w9真是不太好呢。\e:chain=end"
+}}CHAIN
+Chain13
+{{CHAIN
+	"\0\s[0]『尊重人命　和平解决』\w9\w9\n造成的结果是、\w9\n狱中犯人的释放与600万美元的赎金。\w9\w9\1\s[10]和平宪法所产生的弊端啊。\w9\n虽然不能说是不对的…\w9\w9\0\s[6]\n\n[half]好像正顺了恐怖主义的意。\e:chain=end"
+}}CHAIN
+Chain14
+{{CHAIN
+	"\1\s[10]其他的问题像是、\w9因为罪犯过多\w9\n造成监狱的数量不足。\w9\w9\0\s[6]既然这样、\w9从重刑犯的顺序开始\w9\n处决不就好了吗…\w9\w9\1\s[10]\n\n[half]我就觉得你会这么说。\e:chain=end"
+}}CHAIN
+Chain15
+{{CHAIN
+	{
+		"\1\s[10]让你们能够生存下来的、\w9是我。\w9\w9\n为了让你们步上正确的道路…\w9\w9\n但是、你们无法理解我的用意吗？\w9\w9\0\s[32]总之、\w9\n就把白色子弹（SS190）给打进去吧。\w9\w9\1\s[10]\n\n[half]那个括弧是啥…\e:chain=end"
+		"\1\s[10]正因如此…\w9别留下后悔、\w9坚持到底吧。\w9\w9\n吾等无谓生死。\w9\w9追求理想不移。\w9\w9\0\s[5]我用那只黑鸟达成了5连锁喔。\w9\w9\1\s[10]\n\n[half]感动的场面都给你糟蹋掉了。\e:chain=end"
+	}
+}}CHAIN
+Chain16
+{{CHAIN
+	"\0\s[30]有关犯罪逮捕率、\w9\n最近好像稍微提升了喔。\w9\w9\1\s[10]从全体来看的话。\w9\w9\n抢劫、杀人之类的凶恶犯罪逮捕率反而降低了。\w9\w9\0\s[8]\n\n[half]『事无分大小』会这样解释吧、\w9一定。\w9\w9\1\s[10]\n\n[half]别在这种场合用啊。\e:chain=end"
+}}CHAIN
+Chain17
+{{CHAIN
+	"\0\s[7]我哪有虐待你呢。\w9\w9\1\s[11]我可是受了不少精神创伤啊。\w9\w9\0\s[30]\n\n[half]你的心灵有那么纤细吗？\w9\w9\1\s[13]\n\n…\w9太过分了。\w9\w9\w5\n谁都好\w9来治愈我的伤口吧。\w9\w9\0\s[8]\n\n[half]…\w9…\w9…\e:chain=end"
+}}CHAIN
+Chain18
+{{CHAIN
+	"\0\s[0]说起来…\w9\w5\s[30]不是有再生纸吗？\w9\w9\1\s[10]嗯嗯。\w9\w9\0\s[0]\n\n[half]消耗石油、\w9灌进氯、\w9\w5\n制造出昂贵的再生纸或是…\w9\w9\n烧掉变成灰…\w9\w9\n哪种对环境比较好呢？\w9\w9\1\s[10]\n\n[half]用灰当肥料的话、\n感觉好像比较好吧。\w9\w9\0\s[6]\n\n[half]虽然只是有点在想而已。\e:chain=end"
+}}CHAIN
+Chain19
+{{CHAIN
+	{
+		"\0\s[6]在戒备可疑份子的时候、有被声音吓到\w9\n而开枪的警官呢。\w9\w9\1\s[10]是打算一发现\w5就格杀勿论吗。\w9\w9\0\s[0]\n\n[half]"
+		--
+		"就算是在战场、\w9\s[0]\n会让指头扣上板机的机会\n其实也很少喔。\w9\w9\1\s[10]\n\n[half]说穿了、\w9只是个胆小鬼吧。\e:chain=end"
+		"不好好的、确认了\n才射杀不行啊。\w9\1\s[11]\n\n[half]不是啦不是啦。\e:chain=end"
+	}
+}}CHAIN
+Chain20
+{{CHAIN
+	"\0\s[6]讨厌的人的亲切\w9\w9\n不如喜欢的人的无理取闹。\w9\w9\1\s[10]又讲那么苦涩的话。\w9\w9\w9\0\s[0]\n\n[half]歌丸下台一鞠躬。\w9\w5\1\s[11]\n\n[half]抄袭喔。\e"
+	"\0\s[6]在人也不往来的深山里\w9\w9\n开了的红叶的气质。\w9\w9\w9\s[0]\n\n[half]是歌丸。\w9\w9\1\s[10]师傅很帅ー。\e:chain=end"
+}}CHAIN
+Chain21
+{{CHAIN
+	"\0\s[6]…\w9…\w9…\w9\w9\n阪神Tigaz(虎)。\w9\w9\1\s[10]啊？\e:chain=end"
+}}CHAIN
+Chain22
+{{CHAIN
+	{
+		"\1\s[10]说来…\w9\w9『正确的我国话』\w9倒不如说是、\w9\n『文学界的长辈大叔用的我国话』\w9吧。\w9\w9\0\s[8]的确、\w9\w9\s[0]虽然应该只要能传达正确的意义就可以…\w9\s[6]\n我觉得有些东西还是要好好的传承下去。\w9\w9\1\s[10]\n\n[half]真是的…\w9\w9\n我来教真正正确的我国话"
+		--
+		"是也。"
+		"邪留。"
+		--
+		"\w9\w9\0\s[8]\n\n[half]是谁啦？\e:chain=end"
+		"\w9\w9\0\s[8]\n\n[half]错了呢…\e:chain=end"
+	}
+}}CHAIN
+Chain23
+{{CHAIN
+	"\0\s[20]从比萨斜塔\w9\n把未使用的灭火器\w9和空的灭火器往下扔、\w9\n哪边会先到达地面呢？\w9\w9\1\s[11]不准做。\e:chain=end"
+}}CHAIN
+Chain24
+{{CHAIN
+	talkmemo = "r_10"
+	"\0\s[7]这样的话、斗和你会选哪个？\w9\w9\1\s[10]这嘛…\w9\w9\n别培育只用自力就爬上来的东西。\w9\w9\0\s[8]\n\n[half]什么时候变成了狮子呢？\w9\w9\n…\w9说回来、\w9推下来的不是斗和吗。\e:chain=end"
+}}CHAIN
+
+//---- 特殊会话 --------------------------------------------------------------------------------------------------------
+
+SmokingEnd
+{
+	smoking = "0"
+	"\1\s[10]呼…\e"
+}
+
+RestCommunicate
+{
+	rest = "0"
+	"\0\s[51]嗯、\w9不客气。\w9\w9\w9\n\n[half]那么、\w9我去收拾一下喔。\w9\w9\w9\s[99]\n\n[half]…\w9…\w9…\w9…\w9…\w9\w9\s[1]\n\n[half]那个…\w9即使是一点点也好，只要能帮上忙我就很高兴了…\e"
+}
+
+RestEnd
+{
+	rest = "0"
+	"\0\s[51]嗯…\w9我去收拾一下喔。\w9\w9\w9\s[99]\n\n[half]…\w9…\w9…\w9…\w9…\w9\w9\s[26]\n\n[half]让您久等了。\e"
+}
+
+//---- 话して ---------------------------------------------------------------------------------------------------------
+
+ForcedTalk0
+{
+	if talkmemo == "c_0"
+	{
+		"\0\s[26]%(username)你、\w9有染发吗？\w9\w9\1\s[12]了就知道吧。\w9\w9\0\s[8]\n\n[half]或许是天生的发色喔…\n\n/
+		\q[◇有染发,ForcedTalk_c0_0]\n/
+		\q[◇天生的发色,ForcedTalk_c0_1]\n/
+		\q[◇光头,ForcedTalk_c0_2]\e"
+	}
+	elseif talkmemo == "c_1"
+	{
+		"\0\s[26]%(username)的酒量好吗？\n\n/
+		\q[◇好,ForcedTalk_c1_0]\n/
+		\q[◇差,ForcedTalk_c1_1]\n/
+		\q[◇未成年,ForcedTalk_c1_2]\e"
+	}
+	elseif talkmemo == "r_0"
+	{
+		"\0\s[8]虽然明知道只是在演戏…\w9\w9\s[26]\n\n[half]%(username)、\n会对着萤幕吐槽吗？\n\n/
+		\q[◇会,ForcedTalk_r0_yes]\n/
+		\q[◇不会,ForcedTalk_r0_no]\e"
+	}
+	elseif talkmemo == "r_1"
+	{
+		"\0\s[26]%(username)生病的时候会怎么做呢？\w9\w9\s[0]\n觉得感冒了的话会去看医生吗？\w9\w9\1\s[10]实际上会看情况吧。\0\n\n/
+		\q[◇会,ForcedTalk_r1_yes]\n/
+		\q[◇不会,ForcedTalk_r1_no]\e"
+	}
+	elseif talkmemo == "r_2"
+	{
+		"\0\s[26]%(username)有在钓鱼吗？\n\n/
+		\q[◇有,ForcedTalk_r2_yes]\n/
+		\q[◇没有,ForcedTalk_r2_no]\e"
+	}
+	elseif talkmemo == "r_3"
+	{
+		"\1\s[10]说到菸、\w9\s[12]你有吸菸吗？\0\s[0]/
+		\q[◇有吸菸,ForcedTalk_r3_yes]\n/
+		\q[◇没有,ForcedTalk_r3_no]\e"
+	}
+	elseif talkmemo == "r_4"
+	{
+		"\0\s[0]%(username)、\w9有吃过狗吗？\w9\w9\1\s[10]应该没有吧。\0\n\n/
+		\q[◇有,ForcedTalk_r4_yes]\n/
+		\q[◇没有,ForcedTalk_r4_no]\e"
+	}
+	elseif talkmemo == "r_5"
+	{
+		"\0\s[5]%(username)、\w9猜中了吗？\w9\w9\1\s[10]…\w9…\w9…\0\n\n/
+		\q[◇猜中了,ForcedTalk_r5_yes]\n/
+		\q[◇没有,ForcedTalk_r5_no]\e"
+	}
+	elseif talkmemo == "r_6"
+	{
+		"\0\s[0]有准备好防灾物资吗？\0\n\n/
+		\q[◇有准备,ForcedTalk_r6_yes]\n/
+		\q[◇没有,ForcedTalk_r6_no]\e"
+	}
+	elseif talkmemo == "r_7"
+	{
+		"\1\s[10]虽然不怎么重要、\w9\s[12]\n你是猫派？\w9\n还是狗派？\0/
+		\q[◇猫,ForcedTalk_r7_0]\n/
+		\q[◇狗,ForcedTalk_r7_1]\n/
+		\q[◇其他,ForcedTalk_r7_2]\e"
+	}
+	elseif talkmemo == "r_8"
+	{
+		"\1\s[12]你比较讨厌哪一边？\w9\w9\n\n[half]酒鬼？\w9\n还是菸枪？\0/
+		\q[◇酒鬼,ForcedTalk_r8_0]\n/
+		\q[◇吸烟者,ForcedTalk_r8_1]\e"
+	}
+	elseif talkmemo == "r_9"
+	{
+		"\0\s[26]%(username)有向人募捐过吗？\w9\w9\1\s[10]也有像是红羽毛共同募捐、\w9\n被强制征收的情况。\w9\w9\0\s[30]\n\n[half]除了那之外、\w9\w9\s[26]\n对街头募捐怎么想呢？\0\n\n/
+		\q[◇有做过,ForcedTalk_r9_yes]\n/
+		\q[◇没有,ForcedTalk_r9_no]\e"
+	}
+	elseif talkmemo == "r_10"
+	{
+		"\1\s[10]…\w9这样说、\w9\s[12]我们遇溺你会救哪个啦？\w9\w9\0\s[8]问题变得奇怪了…\w9\w9\1\s[10]\n\n[half]嘛、别在意。\w9\w9\0\s[9]\n\n[half]…\w9…\w9…\w9\w9\1\n\n[half]顺带一提就是我不会游泳喔。\w9\w9\0\s[8]\n\n[half]那个…\n\n/
+		\q[◇橘花,ForcedTalk_r10_0]\n/
+		\q[◇斗和,ForcedTalk_r10_1]\n/
+		\q[◇两者,ForcedTalk_r10_2]\e"
+	}
+	elseif talkmemo == "r_11"
+	{
+		"\0\s[20]话说回来…\w9\s[26]\n%(username)你是红茶派吗？\w9\w9\1\s[10]俺是咖啡啦。\w9\w9\0\s[100]\n\n[half]我…\w9常饮绿茶呢。\n\n/
+		\q[◇红茶,ForcedTalk_r11_0]\n/
+		\q[◇咖啡,ForcedTalk_r11_1]\n/
+		\q[◇绿茶,ForcedTalk_r11_2]\e"
+	}
+	elseif talkmemo == "b_0"
+	{
+		"\0\s[8]难道说、\w9是在熬夜吗？\n\n/
+		\q[◇熬夜,ForcedTalk_b0_yes]\n/
+		\q[◇早起,ForcedTalk_b0_no]\e"
+	}
+	elseif talkmemo == "b_1"
+	{
+		"\0\s[0]接下来的时间、\w9是有什么工作要忙吗？\n\n/
+		\q[◇是,ForcedTalk_b1_yes]\n/
+		\q[◇不是,ForcedTalk_b1_no]\e"
+	}
+}
+
+Select.ForcedTalk_c0_0
+{
+	intimacy += 1
+	"\1\s[12]最近、\w9就算是社会人\w9\n也会稍微染发喔。\w9\w9\0\s[6]这样看来、\w9果然是时代的流向呢。\w9\w9\1\s[10]\n\n[half]我可不想、\w9就因为头发的颜色\w9连人格都被怀疑啊。\w9\w9\0\s[8]\n\n[half]不过、\w9如果是太奇怪的颜色\w9\n会稍微有点怀疑呢…\e"
+}
+Select.ForcedTalk_c0_1
+{
+	intimacy += 1
+	"\0\s[6]脱色和\w5染发、\w9\n似乎会让头皮很痛呢。\w9\w9\1\s[10]技术好的话应该是没问题。\w9\w5\n自己来做的话、\w9果然会很痛吧…\w9\w9\0\s[26]\n\n[half]不过、\w9稍微改变心情…\w9\n能这样也不错呢。\w9\w9\1\s[10]\n\n[half]虽然有些职业的人不能这么做。\e"
+}
+Select.ForcedTalk_c0_2
+{
+	intimacy += 2
+	"\1\s[12]呵。\0\s[26]稍微、摸一下可以吗？\e"
+}
+
+Select.ForcedTalk_c1_0
+{
+	intimacy += 3
+	"\1\s[12]呵。\w9\w9\s[10]\n下次…\0\s[5]一起来喝吧？\w9\w9\1\s[10]\n\n[half]说到这、\w9\s[11]你不是未成年吗？\w9\w9\0\s[6]\n\n[half]反正年龄不详。\w9\w9\1\s[10]\n不不不、\w9怎么看都没有20岁以上吧。\w9\w9\0\s[7]\n\n[half]稍微喝一点、\w9有什么关系呢。\e"
+}
+Select.ForcedTalk_c1_1
+{
+	intimacy += 1
+	"\1\s[10]什么嘛、真无趣。\w9\w9\0\s[0]不过、\w9酒量不好但是喜欢小酌\w9\像这样的人\w9\n我觉得是最好的。\w9\w9\1\s[10]\n\n[half]容易满足是吧。\w9\w9\0\s[8]\n\n[half]虽然在饮酒会之类的场合\w5可能会很糟糕…\e"
+}
+Select.ForcedTalk_c1_2
+{
+	intimacy += 1
+	"\1\s[12]别那么拘谨嘛。\w9\w9\0\s[8]说了不行的…\w9\w9\1\s[11]\n\n[half]你也有在喝吧。\w9\w9\0\s[6]\n\n[half]稍微喝一点倒是没什么关系。\w9\w9\1\s[10]\n\n[half]…\w9喂。\e"
+
+}
+
+Select.ForcedTalk_r0_yes
+{
+	intimacy += 3
+	"\0\s[5]会这么做呢、\w9果然。\w9\w9\1\s[10]…\w9该说什么好啊。\w9\w9\0\s[26]\n\n[half]会这么做的是很认真的人呢。\w9\w9\1\s[10]\n\n[half]这种话别自己说啊…\e"
+}
+Select.ForcedTalk_r0_no
+{
+	intimacy += 1
+	"\0\s[3]…\w9是这样啊。\w9\w9\1\s[10]虽然也没啥好在意的。\w9\w5\n在旁人来看、\w9的确会很冷吧。\w9\w9\0\n\n[half]…\w9呜。\e"
+}
+
+Select.ForcedTalk_r1_yes
+{
+	intimacy += 1
+	"\1\s[10]聪明的选择。\w9\w9\0\s[0]不过、\w9太过相信医生\n也不行喔。\w9\w9\1\s[10]\n\n[half]如果有认识的医生的话是最好。\w9\w9\0\s[6]\n\n[half]对家庭医学有了解的人、\w9\n万一的时候或许会有用喔。\e"
+}
+Select.ForcedTalk_r1_no
+{
+	intimacy += 3
+	"\1\s[12]讨厌医生吗？\w9\n\s[10]虽然我也很讨厌…\w9\w9\0\s[6]不过、\w9\s[3]『以为只是感冒、结果是…』\w9\s[0]\n有时也会发生这种事的、\w9\w5\s[26]\n还是去看医生比较好喔。\w9\w9\1\s[10]\n\n[half]和刚才说的前后矛盾喔。\w9\w9\0\s[1]\n\n[half]那、\w9那是…\e"
+}
+
+Select.ForcedTalk_r2_yes
+{
+	intimacy += 3
+	"\0\s[26]是这样吗？\w9\w9\1\s[10]你没有在钓鱼对吧？\w9\w9\0\s[8]\n\n[half]嗯…\w9\w5\n我不太喜欢沉闷呢…\w9\w9\w5\1\s[10]\n\n[half]能够乐在沉闷也是很重要的。\w9\w9\0\s[21]\n\n[half]不过、\w9\w9如果%(username)\n能够教我的话、\w9我也…\w9\1\s[12]\n\n[half]总之食料就拜托了。\w9\w9\0\s[7]\n\n[half]…\w9…\w9…\e"
+}
+Select.ForcedTalk_r2_no
+{
+	intimacy += 1
+	"\1\s[10]什么嘛、\w9还想说能弄到活跳跳的鲜鱼呢。\w9\w9\0\s[0]钓鱼很沉闷呢。\w9\w9\1\s[10]\n\n[half]那是外行人的想法。\w9\w9\n提着钓竿的时候、\w9\n也是在发挥各种技巧喔。\w9\w9\0\s[8]\n\n[half]喔…\e"
+}
+
+Select.ForcedTalk_r3_yes
+{
+	smoker = "1"
+	"\1\s[10]呵。\w9\w9\n那么、我就没必要特地去外头吸菸了。\w9\w9\0\s[8]我也在这里喔…\w9\w9\s[0]\n而且、光是知道%(username)有吸菸、\w9\s[6]\n也不能知道这里可不可以吸菸啊。\w9\w9\1\s[10]\n\n[half]…\w9这倒也是。\e"
+}
+Select.ForcedTalk_r3_no
+{
+	smoker = "0"
+	"是吗。\w9\w9\n或许这比较好吧。\w9\w9\0\s[6]因为吸菸就像是、\w9\n花钱在缩短寿命呢。\w9\w9\1\s[13]\n\n[half]是啊。\e"
+}
+
+Select.ForcedTalk_r4_yes
+{
+	intimacy += 1
+	"\1\s[10]有喔…\w9\w9\0\s[0]味道如何呢？\w9\w9\1\s[10]\n\n[half]你是什么都吃吗。\e"
+}
+Select.ForcedTalk_r4_no
+{
+	intimacy += 1
+	"\0\s[20]吃起来会是什么味道呢？\w9\w9\1\s[10]…\w9我说啊、\w9别提那种话题了。\e"
+}
+
+Select.ForcedTalk_r5_yes
+{
+	intimacy += 2
+	"\0\s[5]真不愧是呢。\1\s[12]你啊…\w9去看看医生比较好喔、\w9\w5治脑袋的那种。\e"
+}
+Select.ForcedTalk_r5_no
+{
+	intimacy += 1
+	"\0\s[6]这样啊…\w9\w9\1\s[10]不…\w9\w9\n猜不中吧、\w5一般来说。\e"
+}
+
+Select.ForcedTalk_r6_yes
+{
+	intimacy += 3
+	"\0\s[5]是这样啊。\w9\w9\1\s[10]『有备无患』是吧。\w9\w9\0\s[0]\n\n[half]不过、\w9不光是准备好、\w9\n偶尔也要去确认一下喔。\w9\w9\n保存食品也是有食用期限的。\w9\s[26]\n快过期了的话、\w9就拿来当做点心吧。\w9\w9\1\s[10]\n\n[half]还蛮能下酒喔。\e"
+}
+Select.ForcedTalk_r6_no
+{
+	intimacy += 1
+	"\0\s[8]是这样吗？\w9\w9\1\s[10]虽然、\w9能派不上用场的话\w9\n是最好。\w9\w9\0\s[0]\n\n[half]或者说、\w9有不管发生什么灾难、\w9\n都能独力生存下来的自信…\w9\w9\1\s[10]\n\n[half]总之、\w9\s[12]不适用于别人的情况也是有的\n好好记住吧。\e"
+}
+
+Select.ForcedTalk_r7_0
+{
+	intimacy += 1
+	"\1\s[10]嗯嗯。\w9\w5\n那很好。\w9\w9\0\s[8]…\w9怎么好法呢？\w9\w9\1\s[12]\n\n[half]这世界上最优秀的生物、\w9就是『猫』喔。\w9\w9\n可别忘记了。\w9\w9\0\n\n[half]这个嘛～。\e"
+}
+Select.ForcedTalk_r7_1
+{
+	intimacy += 1
+	"\1\s[12]狗～？\w9\w9\s[10]\n哼…\w9看来、\w9和你也只到此为止了。\w9\w9\0\s[8]唉…\w9\w9\s[5]\n狗也很可爱喔。\w9\n不只是幼犬、\w5大型犬也很可爱呢。\w9\w9\w9\s[0]\n\n[half]啊…\w9不过、\w9为什么会觉得吉娃娃可爱\n我不能理解。\w9\w9\1\s[10]\n\n[half]简直就像外星人(Little gray)是吧。\w9\w9\0\s[8]\n\n[half]…\w9嗯、\w9就像那种感觉。\e"
+}
+Select.ForcedTalk_r7_2
+{
+	intimacy += 1
+	"\1\s[10]其他是指什么？\w9\w9\0\s[6]最近、\w9宠物也有很多种类呢。\w9\w9\1\s[10]\n\n[half]别当那种少数派、\w9过来猫派吧。\w9\w9\0\s[8]\n\n[half]…\w9…\w9…\e"
+}
+
+Select.ForcedTalk_r8_0
+{
+	intimacy += 1
+	"\1\s[10]酒精的害处、\w9如果有会发酒疯的上司或前辈\n会特别有所体会呢。\w9\w9\0\s[30]斗和不是也有喝酒吗。\w9\w9\1\s[11]\n\n[half]不、\w9我不会发酒疯。\w9\w9\s[10]\n只会睡着而已。\w9\w9\0\s[8]\n\n[half]随地倒头就睡也是很伤脑筋的…\e"
+}
+Select.ForcedTalk_r8_1
+{
+	intimacy += 1
+	towaflag = "0"
+	"\1\s[12]…\w9…\w9…\w9\w9\s[13]\n\n[half]斗和事件标记(Flag)消失\w9…\w9\w9\0\s[8]咦？\e"
+}
+
+Select.ForcedTalk_r9_yes
+{
+	intimacy += 3
+	"\0\s[26]…\w9真是温柔的人呢。\w9\w9\s[0]\n只是、\w9\s[6]有关于捐款的用途\w9\n存在着许多的问题呢。\w9\w9\s[0]\n\n[half]不只是一时的粮食援助、\w9\n要能够达成真正的复兴\n希望能那么使用呢。\w9\w9\1\s[10]因为有些人连过完今天都有问题了、\w9\n没那么简单吧。\w9\w9\0\s[30]\n\n[half]虽然这么说也没错…\w9\w9\1\s[10]\n\n[half]不用想那么多。\w9\n只要自己能捐的满足就行了吧。\w9\w9\0\s[8]\n\n[half]那种想法也很令人质疑…\e"
+}
+Select.ForcedTalk_r9_no
+{
+	intimacy += 1
+	"\1\s[12]讨厌伪善行为\w9是吗？\w9\w9\0\s[0]最近、\w9募集的捐款\n连用到哪里去都搞不清楚了呢。\w9\w9\w5\n其他像是、\w9募款的手段过份强硬、\w9\w9\s[6]\n更过分的是、\w9假募捐之名的诈欺…\w9\w9\w9\s[0]\n\n[half]有名团体的话应该没问题…\w9\n但现在连这么想都不行了呢。\w9\w9\1\s[13]\n\n[half]…\w9到头来根本没有能帮助他人的余裕吧。\w9\w9\0\s[8]\n\n[half]…\w9…\w9…\e"
+}
+
+Select.ForcedTalk_r10_0
+{
+	intimacy += 5
+	"\0\s[2]欸…\w9是这样吗？\w9\w9\s[40]\n谢谢。\w9\w9\1\s[10]哼、\w9嘛、让你来救我\n我也完蛋了啦。\w9\w9\w9\s[13]\n…\w9那么、\w9接下来\n『Taromati绵流编』请好好期待啦。\w9\w9\0\s[8]\n\n[half]…\w9那个、是什么呢？\e"
+}
+Select.ForcedTalk_r10_1
+{
+	intimacy += 1
+	"\1\s[13]唔…\w9啊～。\w9\w9\0\s[30]？\w9\w9\1\n\n[half]这样啊…\e"
+}
+Select.ForcedTalk_r10_2
+{
+	intimacy += 2
+	"\1\s[10]优柔寡断的家伙。\w9\w9\0\s[30]本来、斗和你不是会游泳吗？\w9\w9\1\n\n[half]猫不会游泳之类的偏见不好喔。\w9\w9\0\n\n[half]…\w9啊。\e"
+}
+
+Select.ForcedTalk_r11_0
+{
+	intimacy += 1
+	tea = "0"
+	"\1\s[10]没有掺血吧。\w9\w9\0\s[100]味道变得圆滑哟。\w9\w9\1\n\n[half]…\w9没有就好啦。\e"
+}
+Select.ForcedTalk_r11_1
+{
+	intimacy += 1
+	tea = "1"
+	if smoker == "1"
+	{
+		"\1\s[10]嘛、\w9香菸配咖啡啦。\w9\w9\0\s[8]有这东西的吗？\e"
+		"\1\s[10]花点时间、一点点啜着饮\w9\n真是不错啦。\w9\w9\0\s[30]斗和只是等它变冷哟。\w9\w9\1\s[11]\n\n[half]不、\w9就说不是这样啦。\e"
+	}
+	else
+	{
+		"\1\s[10]花点时间、一点点啜着饮\w9\n真是不错啦。\w9\w9\0\s[30]斗和只是等它变冷哟。\w9\w9\1\s[11]\n\n[half]不、\w9就说不是这样啦。\e"
+	}
+}
+Select.ForcedTalk_r11_2
+{
+	intimacy += 1
+	tea = "2"
+	"\0\s[5]很美味呢。\w9\w9\1\s[10]咖啡因含量也\w5出奇地多啦。\w9\w9\0\s[8]\n\n[half]不过咖啡因含量不是基准呢…\e"
+}
+
+Select.ForcedTalk_b0_yes
+{
+	intimacy += 1
+	"\0\s[0]是这样吗？请不要太过勉强喔。\e"
+}
+Select.ForcedTalk_b0_no
+{
+	intimacy += 1
+	"\1\s[12]还真是健康啊。\w9\w9\0\s[26]俗话说\w9『早起的鸟儿有虫吃』呢。\w9\w9\1\s[10]\n\n[half]该不会是\w9因为年纪大了吧。\w9\w9\0\s[8]\n\n[half]…\w9…\w9…\e"
+}
+
+Select.ForcedTalk_b1_yes
+{
+	intimacy += 1
+	"这样啊。\w9\w9\s[3]\n如果、\w9我能帮忙的话、\w9\n就好了呢…\w9\w9\1\s[10]总之、\w9\w5\n适度的努力吧。\w9\w9\0\s[26]\n\n[half]请加油喔。\e"
+}
+
+Select.ForcedTalk_b1_no
+{
+	intimacy += 1
+	"\1\s[10]没事做的话、\w9去睡觉如何？\w9\w9\0\s[26]虽然很高兴能见面、\w9\w9\s[0]\n也请注意自己的身体喔。\e"
+}
+
+ForcedTalk1
+{
+	if RAND(4) == 0
+	{
+		"\0\s[26]那么…\w5\1\s[10]禁止血腥话题。\w9\w9\0\s[8]\n\n[half]咦、\w9啊～那个…\w9\w9\w9\1\s[10]\n\n[half]没其他的了吗…\e"
+	}
+	else
+	{
+		OnAiTalk
+	}
+}
+
+
+
+//**** コミュニケート *************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+﻿///////// 文　ゴーストテンプレート
+///////// aya.txt (設定ファイル)
+///////// written by umeici.
+///////// amend by ndmh.
+
+charset, UTF-8
+charset.extension, default
+
+//---- 系统辞书 ---------------------------------------------------------------------
+dic, yaya_config.dic		      // 文 ver.3 形式辞書設定辞書
+dic, yaya_shiori3.dic		      // 文 ver.3 形式辞書制御辞書
+dic, yaya_compatible.dic	    // YAYAに移行用（YAYA: AYA過去互換用辭書）
+dic, aya_sysex.dic		        // aya_shiori3.dicから分離した
+
+//---- -------- ---------------------------------------------------------------------
+dic, dic\aya_string.dic		    // 文字列リソース辞書(右键菜单辞书
+dic, dic\aya_bootend.dic		  // 起動/終了/切り替えトーク辞書（起动/关闭/切换 对话辞书/最小/大化
+dic, dic\aya_mouse.dic		    // マウス入力関連辞書
+dic, dic\aya_etc.dic		      // 種々のイベント辞書（其他核心事件辞书
+dic, dic\aya_menu.dic				  // 目录选单处理辞书
+dic, dic\aya_time.dic
+
+dic, dic\dictionary.dic       // 字典
+dic, dic\cryptogram.dic       // 密
+dic, dic\changeshell.dic      // 换装（更衣室）
+dic, dic\poesy.dic            // 诗歌
+
+dic, dic\Other.dic            // 五十音，记事本，好感，占卜，大头贴
+
+//---- 对话用辞书 ---------------------------------------------------------------------
+dic, dic\aya_aitalk.dic		    // 通常对话
+dic, dic\aya_aitalk_t.dic     // 吸烟室对话
+
+dic, dic\aya_comm.dic         // 沟通对话
+dic, dic\aya_comm_user.dic    // 橘花自带的与user的对话
+dic, dic\comm&user.dic        // 教学对话教学和输出,以及修改删除
+
+dic, dic\flower.dic           // 花语
+
+dic, dic\talks\idea\anime.dic
+dic, dic\talks\idea\computer_science.dic
+dic, dic\talks\idea\game.dic
+
+dic, dic\talks\science\anime.dic
+dic, dic\talks\science\computer_science.dic
+dic, dic\talks\science\game.dic 
+dic, dic\talks\science\character.dic
+dic, dic\talks\science\comic.dic
+dic, dic\talks\science\military.dic
+dic, dic\talks\science\nature.dic
+dic, dic\talks\science\religion.dic
+dic, dic\talks\science\society.dic
+dic, dic\talks\science\mathmetic.dic
+//---- 実行ログ -------------------------------------------------------------------------
+//log, ayame.log			// 实行LOG会记录在ayame.log中。。
+//iolog, on          //有关使用“玉”的选项

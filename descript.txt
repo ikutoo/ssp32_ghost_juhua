@@ -1,0 +1,12 @@
+﻿charset,UTF-8
+name,橘花2简体中文修改版
+type,ghost
+craftman,8
+craftmanw,8
+sakura.name,橘花
+kero.name,斗和
+
+sstp.allowunspecifiedsend,1
+icon,kikka.ico
+shiori,yaya.dll
+;shiori,aya5.dll

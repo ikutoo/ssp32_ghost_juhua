@@ -1,0 +1,11 @@
+Charset,UTF-8
+balloon,D:\ssp32\balloon\wiz\
+communicate.top,312
+Window.AlwaysOnTop,1
+communicate.left,774
+Update.TestMode,0
+Char0.center,1172
+FirstBoot,booted
+shell,shell\WIN7\
+Char1.center,76
+Talk.Activate,true

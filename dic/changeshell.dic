@@ -1,0 +1,116 @@
+﻿///////// 
+///////// 换装
+///////// amend by ndmh.[2009-11-13]★
+
+//**************************************
+//要显示图片必须shell的名字和shell的文件夹名字一样,或者先切换一次该shell就可以了
+//其实可以使用\![get,property,事件,currentghost.shelllist(外表名称).path],路径会在事件的reference0传回,不过如果外表名称中带有括号的话会无法实现...
+//**************************************
+
+//**** 平常shell的切换 *****************************************************************************************
+//---- SHELL更替开始 -----------------------------------------------------------------
+OnShellChanging
+{
+	"\0\s[0]换装为%(reference0)。\e"
+}
+//---- SHELL更替完毕 -----------------------------------------------------------------
+OnShellChanged
+{
+  shellID = reference0;
+  if judgeshell(shellID)=="0|" {
+    SETDELIM(reference2,"/");
+    _p=reference2[ARRAYSIZE(reference2)-2];
+    Haveshellinfo+="%(reference0)|%(_p)*";
+  }
+	"\1\s[10]\0\s[0]…嗯、\w9\w9\s[5]这样子如何呢？\e"
+}
+//**************************************************************************************************************
+
+Onchangeshell
+{
+  shelllistcount = ARRAYSIZE(shelllist);
+  _j=1;
+  _q="";
+  _shellID=shellID;
+  SETDELIM(shelllist,"*")
+  if reference0!=null {
+    _j=TOINT(reference0);
+  }
+  if reference1!=null && reference1!=shellID {
+    _q="\f[color,242,35,250]\![*]\q[确定 换装为%(reference1),Onchangeshelled,%(reference1)]\f[default]";
+    _shellID=reference1;
+  }
+  _shellpath="..\..\shell\%(_shellID)\";
+  if judgeshell(_shellID)!="0|"
+    _shellpath ="..\..\shell\%(judgeshell(_shellID))\"; 
+  _Shellrand=ANY("00","01","02","03","05","07","20","21","22","23","26","30","32");
+  _w="\0\s[26]\b[2]\_q橘花共有%(shelllistcount)件衣服哦，%username想让橘花穿那件衣服呢？\n[140]\_b[%(_shellpath)surface00%(_Shellrand).png,40,30]";
+  _n=1;
+	foreach shelllist; _i {
+    if _n>=_j && _n<_j+15 {
+        if shellID==_i
+          _w += "\f[color,240,45,100]\&[hearts]\f[default]\q[%(_i),Onchangeshell,%(_j),%(_i)]\n[120]";
+        elseif _shellID==_i
+          _w += "\f[color,24,98,250]\&[hearts]\f[default]\q[%(_i),Onchangeshell,%(_j),%(_i)]\n[120]";
+        else
+          _w += "\f[color,168,168,168]\&[hearts]\f[default]\q[%(_i),Onchangeshell,%(_j),%(_i)]\n[120]";
+      }
+    _n ++;
+	}
+	_Page="";
+	if shelllistcount<=15
+    _Page="";
+	elseif _j==1 && shelllistcount>15
+    _Page="\n[30] \q[下一页>>,Onchangeshell,%(_j+15)]\n[140]";
+  elseif _j>1 && _j+15>shelllistcount
+    _Page="\n[30] \q[上一页<<,Onchangeshell,%(_j-15)]\n[140]";
+  else
+    _Page="\n[30] \q[<<上一页,Onchangeshell,%(_j-15)]   \q[下一页>>,Onchangeshell,%(_j+15)]\n[140]";  
+	_w+_Page+_q+"\n[150]\![*]\q[返回,ReturnMenu]\n\![*]\q[取消,overchangeshell]\e"
+}
+
+judgeshell
+{
+  _a="0|";
+  SETDELIM(Haveshellinfo,"*")
+  foreach Haveshellinfo; _i {
+    if _argv[0] ==  _i[0,"|"]
+      _a=_i[1,"|"];
+  }
+  _a;
+}
+
+Onchangeshelled
+{
+  "\0%(reference0)吗?\n知道了,\w5那橘花去换衣服了哦~\w9\s[-1]\b[-1]\w9\![change,shell,%(reference0)]\e"
+  "\0%(reference0)吗?\n好的，知道了，\w5橘花换衣服了哦，%username不许偷看哈♪\w9\s[-1]\b[-1]\w9\![change,shell,%(reference0)]\e"
+}
+
+Select.overchangeshell
+{
+  "\0不用换也行吗?\w6\n果然是%(shellID)好吗～\e"
+}
+
+On_installedshellname
+{
+	shelllist = "";
+	_i = 0;
+	while _i >= 0 {
+		_shellname = NAMETOVALUE("reference%(_i)");
+		if _shellname != "" {
+			if _i > 0
+         shelllist += "*";
+        shelllist += _shellname[0];
+        _i++;
+		}
+		else
+      _i = -1;
+	}
+	shelllistcount = ARRAYSIZE(shelllist);
+}
+
+
+
+
+
+

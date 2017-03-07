@@ -1,0 +1,141 @@
+﻿///////// 
+///////// 密
+///////// written by ndmh[2010-1-14]★
+
+//-----------------------------------------------------------------------------------------------------------
+initializecryptogramndmh : void
+{
+  SQL("UPDATE currency SET A='ndmh' WHERE Q='cryptogramndmh'");
+}
+
+Onamendcryptogramndmh
+{
+  "\0\s[5]那个...%username要把密码改成什么哦?\n\w8要容易记的,不能忘记哦~\w8\1忘记的话会怎么样呢?\0\w8\n......\![open,inputbox,OnPasswordUpdate,-1]\n[300]\![set,choicetimeout,0]\q[◇不改了,overPasswordInput]\e"
+}
+
+OnPasswordUpdate
+{
+  _password = cryptogramndmh;
+	if reference0 == "" || reference0 == _password {
+    "\0\s[20]那个...请输入新密码喔...\![open,inputbox,OnPasswordUpdate,-1]\n[300]\q[◇不改了,overPasswordInput]\e"
+	}
+	elseif "'" _in_ reference0 {
+    "\0\s[21]那个...不可以使用小写『 ' 』哦！请重新输入~\![open,inputbox,OnPasswordUpdate,-1]\n[300]\q[◇不改了,overPasswordInput]\e"
+	}
+	else {
+    _a = cryptogramndmhUpdate(reference0);
+    if _a == 0 {
+      "\0\s[29]新密码:%reference0\n橘花已经记下了哦,\w8%username也要记住喔~"
+    }
+    else {
+      "失败了,未知BUG!\e"
+    }
+	} 
+}
+
+cryptogramndmhUpdate
+{
+  SQL("UPDATE currency SET A='%(_argv[0])' WHERE Q='cryptogramndmh'");
+}
+
+cryptogramndmh
+{
+  SQL("SELECT A FROM currency WHERE Q='cryptogramndmh'","-j");
+}
+
+Select.秘密服务
+{
+  "\0\s[40]阿啦阿啦~~\w6%(username)要进入秘密服务项啊..\w9\n嗯，那么..\w9\s[22]\w9现在开始确认身份喔~\w5\![open,inputbox,OnPasswordInput,-1]\e"
+}
+
+OnPasswordInput
+{
+  _password = cryptogramndmh;
+	if reference0 == "" {
+		"\0\s[34]那个..\w4要有密码才能通过哦..\w9%(username)特别交代的哦~\1\s[11]拿着刀.........\0\e"
+	}
+	elseif reference0 == _password {
+		"\0\s[5]身份确认完毕..\w8\真是%(username)哦~\w9那么\w9没什么事了喔~\1\s[11]被玩了....\w9\w9\w9\w9\0\s[33]\n橘花开玩笑的啦，看下面哦...\w9\n\n[half]/
+		\q[◇数据库管理,dbms]\n/
+		\q[◇修改密码,Onamendcryptogramndmh]\n\n[half]/
+		\q[◇看动画片日语必学50句,OnStudyJapanese]\n\n[150]/
+		\q[◇取消,overjp]\e"
+	}
+	else {
+		"\0\s[35]身份确认失败....\w9\w9\1\s[11]...\0\s[32]\n那个....\w4有些事只能和%(username)说哦，外人就不好意思了的说~~\1\s[11]\n也用不拿枪吧....\e"
+	}
+}
+
+Select.overPasswordInput
+{
+  "\0\s[5]密码不用改也可以吗,好的,橘花知道了喔~\![close,inputbox,OnPasswordUpdate]\e"
+}
+
+Select.overjp
+{
+  "\0\s[5]这样吗,嗯嗯,好的\e"
+}
+
+OnStudyJapanese : nonoverlap
+{
+	"\0\s[26]こんばんは.\n ko n ba n wa  \n晚上好.  "
+	"\0\s[26]おはようございます.\n o ha yo u go za i ma su  \n早上好.  "
+	"\0\s[26]お休(やす)みなさい.\n o ya su mi na sai  \n晚安.  "
+	"\0\s[26]お元気(げんき)ですか.\n o ge n ki de su ka  \n您还好吧\n相当于英语的『How are you』,一种打招呼的方式.  "
+	"\0\s[26]いくらですか.\n i ku ra de su ka  \n多少钱?  "
+	"\0\s[26]すみません.\n su mi ma se n  \n不好意思,麻烦你…\n相当于英语的『Excuse me』.用于向别人开口时.  "
+	"\0\s[26]ごめんなさい.\n go me n na sa i  \n对不起.  "
+	"\0\s[26]どういうことですか.\n do u i u ko to de su ka  \n什么意思呢?  "
+	"\0\s[26]山田さんは中国语(ちゅうごくご)が上手(じょうず)ですね.\n ya ma da sa n wa chu u go ku go ga jyo u zu te su ne  "
+	"\0\s[26]まだまだです.\n ma da ma da de su  \n没什么.没什么.(自谦)  "
+	"\0\s[26]どうしたの. do u shi ta no  \nどうしたんですか. do u shi ta n de su ka  \n发生了什么事啊.  "
+	"\0\s[26]なんでもない. na n de mo na i  \n没什么事.  "
+	"\0\s[26]ちょっと待ってください.\n cho tto ma tte ku da sa i  \n请稍等一下.  "
+	"\0\s[26]约束(やくそく)します.\n ya ku so ku shi ma su  \n就这么说定了.  "
+	"\0\s[26]これでいいですか.\n o re te i i de su ka  \n这样可以吗?  "
+	"\0\s[26]けっこうです.\n ke kko u de su  \nもういいです. mo u i i de su  \n不用了.  "
+	"\0\s[26]どうして. do u shi te  \nなぜ na ze  \n为什么啊?  "
+	"\0\s[26]いただきます\n i ta da ki ma su  \n那我开动了.(吃饭动筷子前)  "
+	"\0\s[26]ごちそうさまでした.\n go chi so u ma de shi ta  \n我吃饱了.(吃完后)  "
+	"\0\s[26]ありがとうございます.\n a ri ga to go za i ma su  \n谢谢.  "
+	"\0\s[26]どういたしまして.\n do u i ta shi ma shi te  \n别客气.  "
+	"\0\s[26]本当(ほんとう)ですか.\n ho n to u de su ka  \n"
+	"\0\s[26]うれしい.\n u le si i  \n我好高兴.(女性用语)  "
+	"\0\s[26]よし.いくぞ.\n yo si i ku zo  \n好!出发(行动). (男性用语)  "
+	"\0\s[26]いってきます. \ni tu te ki ma su  \n我走了.(离开某地对别人说的话)  "
+	"\0\s[26]いってらしゃい.\n i tu te la si ya i  \n您好走.(对要离开的人说的话)  "
+	"\0\s[26]いらしゃいませ.\n i la si ya i ma se  \n欢迎光临.  "
+	"\0\s[26]また,どうぞお越(こ) しください.\n ma ta do u zo o ko si ku da sa i  \n欢迎下次光临.  "
+	"\0\s[26]じゃ,またね. zi ya ma ta ne  \nでは,また. de wa ma ta  \n再见(比较通用的用法)  "
+	"\0\s[26]信(しん) じられない.\n shi n ji ra re na i  \n真令人难以相信.  "
+	"\0\s[26]どうも.\n do u mo  \n该词意思模糊.有多谢,不好意思,对不起等多种意思,可以说是个万能词.  "
+	"\0\s[26]あ,そうだ.\n a so u da  \n啊,对了.表示突然想起另一个话题或事情.(男性用语居多)  "
+	"\0\s[26]えへ?\n e he  \n表示轻微惊讶的感叹语.  "
+	"\0\s[26]うん,いいわよ.\n u n i i wa yo  \n恩,好的.(女性用语,心跳回忆中藤崎答应约会邀请时说的)  "
+	"\0\s[26]ううん,そうじゃない.\n u u n so u ja na i  \n不,不是那样的.(女性用语)  "
+	"\0\s[26]がんばってください.\n ga n ba tte ku da sa i  \n请加油.(日本人临别时多用此语)  "
+	"\0\s[26]ご苦労(くろう) さま. go ku ro u sa ma  \n辛苦了.(用于上级对下级)  \nお疲(つか)れさま. o tsu ka re sa ma  \n辛苦了.(用于下级对上级和平级间)  "
+	"\0\s[26]どうぞ远虑(えんりょ) なく.\n do u zo e n ryo na ku  \n请别客气.  "
+	"\0\s[26]おひさしぶりです. o hi sa shi bu ri de su  \nしばらくですね. shi ba ra ku de su ne  \n好久不见了.  "
+	"\0\s[26]きれい.\n ki re i  \n好漂亮啊.(可用于建筑,装饰品,首饰,画,女性的相貌等等,范围很广)  "
+	"\0\s[26]ただいま.\n ta da i ma  \n我回来了.(日本人回家到家门口说的话)  "
+	"\0\s[26]おかえり.\n o ka e ri  \n您回来啦.(家里人对回家的人的应答)  "
+	"\0\s[26]いよいよぼくの本番(ほんばん)だ.\n i yo i yo bo ku no ho n ba n da  \n总算到我正式出场了.(男性用语)  "
+	"\0\s[26]関系(かんけい) ないでしょう.\n ka n ke i na i de sho u  \n这和你没关系吧?(对八卦的人常用的一句话)  "
+	"\0\s[26]电话番号(でんわばんごう) を教えてください.\n de n wa ba n go u o o shi e te ku da sa i  \n请告诉我您的电话号码.  "
+	"\0\s[26]日本语(にほんご) はむずかしいことばがはなせませんが,やさしいことばがなんとかはなせます.\n ni ho n go wa mu zu ka shi i ko to ba ga ha na se ma se n ga ya sa shi i ko to ba ga na n to ka ha sa se ma su  \n日语难的说不上来,简单的还能对付几句.  "
+	"\0\s[26]たいへん!\n da i he n  \n不得了啦.  "
+	"\0\s[26]おじゃまします. o ja ma shi ma su  \n打搅了.到别人的处所时进门时说的话.  \nおじゃましました. o ja ma shi ma shi ta  \n打搅了.离开别人的处所时讲的话.  "
+	"\0\s[26]はじめまして.\n ha ji me ma shi te  \n初次见面请多关照.  "
+	"\0\s[26]どうぞよろしくおねがいします.\n do u zo yo ro shi ku o ne ga i shi ma su  \n请多关照.  "
+	"\0\s[26]いままでおせわになにました. i ma ma de o se wa ni na ni ma shi ta  \nいままでありがとうございます. i ma ma de a ri ga to u go za i ma su  \n多谢您长久以来的关照.(要离开某地或跳槽时对身边的人说的.)  "
+	"\0\s[26]お待たせいたしました.\n o ma ta se i shi ma shi ta  \n让您久等了.  "
+	"\0\s[26]别(べつ)に.\n be tsu ni  \n没什么.当别人问你发生了什么事时你的回答.  "
+	"\0\s[26]冗谈(じょうだん) を言わないでください.\n jo u da n o i wa na i de ku da sa i  \n请别开玩笑.  "
+	"\0\s[26]おねがいします.\n o be ga i shi ma su  \n拜托了.\n(如果是跪着时说这句话,那意思就是『求求您了』)  "
+	"\0\s[26]そのとおりです.\n so no to ri de su  \n说的对.  "
+	"\0\s[26]なるほど.\n na ru ho do  \n原来如此啊.  "
+	"\0\s[26]どうしようかな  do u shi yo u ka na  \nどうすればいい do u su re ba i i  \n我该怎么办啊? "
+	--
+	"\n\n[half]\q[◇下一句,OnStudyJapanese]\n\q[◇不学了,overjp]\e"
+}
